@@ -1,0 +1,90 @@
+package b4a.example.designerscripts;
+import anywheresoftware.b4a.objects.TextViewWrapper;
+import anywheresoftware.b4a.objects.ImageViewWrapper;
+import anywheresoftware.b4a.BA;
+
+
+public class LS_detailqurbanconfirmation{
+
+public static void LS_general(java.util.LinkedHashMap<String, anywheresoftware.b4a.keywords.LayoutBuilder.ViewWrapperAndAnchor> views, int width, int height, float scale) {
+anywheresoftware.b4a.keywords.LayoutBuilder.setScaleRate(0.3);
+views.get("panelqurban").vw.setLeft((int)((0d / 100 * width)));
+views.get("panelqurban").vw.setWidth((int)((100d / 100 * width) - ((0d / 100 * width))));
+views.get("panelqurban").vw.setTop((int)((0d / 100 * height)));
+views.get("panelqurban").vw.setHeight((int)((110d / 100 * height)));
+views.get("panelinvoice").vw.setTop((int)((2d / 100 * height)));
+views.get("panelinvoice").vw.setLeft((int)((3d / 100 * width)));
+views.get("panelinvoice").vw.setWidth((int)((97d / 100 * width) - ((3d / 100 * width))));
+views.get("panelinvoice").vw.setHeight((int)((25d / 100 * height)));
+views.get("part1").vw.setTop((int)((views.get("panelinvoice").vw.getTop())+(views.get("panelinvoice").vw.getHeight())));
+views.get("part1").vw.setLeft((int)((3d / 100 * width)));
+views.get("part1").vw.setWidth((int)((97d / 100 * width) - ((3d / 100 * width))));
+views.get("part2").vw.setTop((int)((views.get("part1").vw.getTop())+(views.get("part1").vw.getHeight())-(3d / 100 * height)));
+views.get("part2").vw.setLeft((int)((6d / 100 * width)));
+views.get("part2").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part3").vw.setTop((int)((views.get("part2").vw.getTop())+(views.get("part2").vw.getHeight())-(3d / 100 * height)));
+views.get("part3").vw.setLeft((int)((6d / 100 * width)));
+views.get("part3").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part4").vw.setTop((int)((views.get("part3").vw.getTop())+(views.get("part3").vw.getHeight())-(3d / 100 * height)));
+views.get("part4").vw.setLeft((int)((6d / 100 * width)));
+views.get("part4").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part5").vw.setTop((int)((views.get("part4").vw.getTop())+(views.get("part4").vw.getHeight())-(3d / 100 * height)));
+views.get("part5").vw.setLeft((int)((6d / 100 * width)));
+views.get("part5").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part6").vw.setTop((int)((views.get("part5").vw.getTop())+(views.get("part5").vw.getHeight())-(3d / 100 * height)));
+views.get("part6").vw.setLeft((int)((6d / 100 * width)));
+views.get("part6").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part7").vw.setTop((int)((views.get("part6").vw.getTop())+(views.get("part6").vw.getHeight())-(3d / 100 * height)));
+views.get("part7").vw.setLeft((int)((6d / 100 * width)));
+views.get("part7").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part8").vw.setTop((int)((views.get("part7").vw.getTop())+(views.get("part7").vw.getHeight())-(3d / 100 * height)));
+views.get("part8").vw.setLeft((int)((6d / 100 * width)));
+views.get("part8").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part9").vw.setTop((int)((views.get("part8").vw.getTop())+(views.get("part8").vw.getHeight())-(3d / 100 * height)));
+views.get("part9").vw.setLeft((int)((6d / 100 * width)));
+views.get("part9").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part10").vw.setTop((int)((views.get("part9").vw.getTop())+(views.get("part9").vw.getHeight())-(3d / 100 * height)));
+views.get("part10").vw.setLeft((int)((6d / 100 * width)));
+views.get("part10").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("part11").vw.setTop((int)((views.get("part10").vw.getTop())+(views.get("part10").vw.getHeight())-(3d / 100 * height)));
+views.get("part11").vw.setLeft((int)((6d / 100 * width)));
+views.get("part11").vw.setWidth((int)((97d / 100 * width) - ((6d / 100 * width))));
+views.get("btnconfirm").vw.setTop((int)((100d / 100 * height)));
+views.get("btnconfirm").vw.setHeight((int)((110d / 100 * height) - ((100d / 100 * height))));
+views.get("btnconfirm").vw.setLeft((int)((3d / 100 * width)));
+views.get("btnconfirm").vw.setWidth((int)((97d / 100 * width) - ((3d / 100 * width))));
+views.get("label3").vw.setTop((int)((2d / 100 * height)));
+views.get("label3").vw.setLeft((int)((5d / 100 * width)));
+views.get("label3").vw.setWidth((int)((35d / 100 * width) - ((5d / 100 * width))));
+views.get("label3").vw.setHeight((int)((5d / 100 * height)));
+views.get("label5").vw.setTop((int)((views.get("label3").vw.getHeight())+(views.get("label3").vw.getTop())));
+views.get("label5").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label5").vw.setLeft((int)((5d / 100 * width)));
+views.get("label5").vw.setWidth((int)((35d / 100 * width) - ((5d / 100 * width))));
+views.get("label7").vw.setTop((int)((views.get("label5").vw.getHeight())+(views.get("label5").vw.getTop())));
+views.get("label7").vw.setHeight((int)((views.get("label5").vw.getHeight())));
+views.get("label7").vw.setLeft((int)((5d / 100 * width)));
+views.get("label7").vw.setWidth((int)((35d / 100 * width) - ((5d / 100 * width))));
+views.get("label4").vw.setTop((int)((views.get("label3").vw.getTop())));
+views.get("label4").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label4").vw.setLeft((int)((40d / 100 * width)));
+views.get("label4").vw.setWidth((int)((92d / 100 * width) - ((40d / 100 * width))));
+views.get("label6").vw.setTop((int)((views.get("label4").vw.getTop())+(views.get("label4").vw.getHeight())));
+views.get("label6").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label6").vw.setLeft((int)((40d / 100 * width)));
+views.get("label6").vw.setWidth((int)((92d / 100 * width) - ((40d / 100 * width))));
+views.get("label8").vw.setTop((int)((views.get("label6").vw.getTop())+(views.get("label6").vw.getHeight())));
+views.get("label8").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label8").vw.setLeft((int)((40d / 100 * width)));
+views.get("label8").vw.setWidth((int)((92d / 100 * width) - ((40d / 100 * width))));
+views.get("label11").vw.setTop((int)((views.get("label7").vw.getTop())+(views.get("label7").vw.getHeight())));
+views.get("label11").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label11").vw.setLeft((int)((5d / 100 * width)));
+views.get("label11").vw.setWidth((int)((35d / 100 * width) - ((5d / 100 * width))));
+views.get("label12").vw.setTop((int)((views.get("label8").vw.getTop())+(views.get("label8").vw.getHeight())));
+views.get("label12").vw.setHeight((int)((views.get("label3").vw.getHeight())));
+views.get("label12").vw.setLeft((int)((40d / 100 * width)));
+views.get("label12").vw.setWidth((int)((92d / 100 * width) - ((40d / 100 * width))));
+
+}
+}

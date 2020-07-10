@@ -24,14 +24,15 @@ Sub Globals
 	Private NavbarTitle As Label
 	
 	Private CLV As CustomListView
-	Private PanelListItem As B4XView
-	Private ProjectName As B4XView
+	Private PanelListItem As B4XView	
+	Private Transaction As Label
+	Private Date As Label
+	Private Status As Label
+	Private Jamaah As Label
 	Private IDpro As Label
-	Private FundNeed As Label
-	Private FundCollect As B4XView
-	Private WorshipPlace As B4XView
-	Private IDworship As Label
-	Private LDatetime As Label
+	'Private FundCollect As B4XView
+	'Private WorshipPlace As B4XView
+	'Private ProjectName As B4XView
 	Private BtnDonationHere As Button
 	Private Qurban As Button
 End Sub
@@ -51,44 +52,24 @@ End Sub
 
 Sub Activity_Resume
 	CLV.Clear
-	CodeSemua.ExecuteUrlGet(Main.server&"api/qurban/confirmation?id="&HomeStewardship.worship,"LoadData",Me)
+	CodeSemua.ExecuteUrlGet(Main.server&"api/qurban/transaction?id="&HomeStewardship.id,"LoadData",Me)
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
-Private Sub CreateItem(Width As Int, id As String, from As String, Donation As String, total As String, datetimes As String, status As String) As Panel
+Private Sub CreateItem(Width As Int, Transactions As String, Dates As String, Statuss As String, Jamaahs As String) As Panel
 	Dim p As B4XView = xui.CreatePanel("")
 	
 	p.SetLayoutAnimated(0, 0, 0, Width, 30%y)
 	p.LoadLayout("ListQurbanConfirmation")
-	
-	ProjectName.Text = "Qurban "&Donation
-	IDpro.Text = id
-	FundNeed.Text = "From : "&from
-	WorshipPlace.Text = "Datetime : "&datetimes
-	
-	If Donation = "project" Then
-		FundCollect.Text = "Donation : Infaq Mosque Development ("&total&")"
-	Else If Donation = "orphanage" Then
-		FundCollect.Text = "Donation : Infaq Orphans ("&total&")"
-	Else If Donation = "tpa" Then
-		FundCollect.Text = "Donation : Infaq TPA/MDA ("&total&")"
-	Else If Donation = "poor" Then
-		FundCollect.Text = "Donation : Infaq Poor ("&total&")"
-	Else
-		FundCollect.Text = "Qurban : "&Donation&" ("&total&")"
-	End If
-	
-	If status = False Then
-		LDatetime.Text = "Status: Checking"
-		LDatetime.TextColor = Colors.Red
-	Else
-		LDatetime.Text = "Status: Confirmed"
-		LDatetime.TextColor = Colors.Green
-		BtnDonationHere.Visible = False
-	End If
+		
+	Transaction.Text 	= "Transaction  "&Transactions
+	Date.Text 			= "Date                "&Dates
+	Status.Text 		= "Status             "&Statuss
+	Jamaah.Text 		= "Jamaah          "&Jamaahs
+	IDpro.Text = Transactions
 	
 	Return p
 End Sub
@@ -114,7 +95,7 @@ Sub JobDone (Job As HttpJob)
 							Dim a As Map
 							a = data.Get(i)
 							'Log("NAMAE: "&a.Get("name"))
-							CLV.Add(CreateItem(CLV.AsView.Width,a.Get("id"),a.Get("username"),a.Get("animal_type"),a.Get("fund"),a.Get("datetime"), a.Get("confirmation")),"")
+							CLV.Add(CreateItem(CLV.AsView.Width,a.Get("invoice"),a.Get("date"),a.Get("payment_completed"),a.Get("jamaah_name")),"")
 							CLV.AsView.Height = (PanelListItem.Height+2%y) *CLV.Size
 						Next
 						
@@ -145,8 +126,7 @@ Sub CLV_ItemClick (Index As Int, Value As Object)
 	Dim a As B4XView
 	a = p.GetView(0)
 	
-	idSelected=a.GetView(0).GetView(5).Text
-	Log(idSelected)
+	idSelected=a.GetView(0).GetView(0).Text	
 	StartActivity(QurbanStewardshipDetail)
 End Sub
 
@@ -158,17 +138,12 @@ Sub PanelListItem_Click
 	Dim a As B4XView
 	a = p.GetView(0)
 	
-	idSelected=a.GetView(0).GetView(5).Text
-	Log(idSelected)
+	idSelected=a.GetView(0).GetView(5).Text	
 	StartActivity(QurbanStewardshipDetail)
 End Sub
 
 Sub Profile_Click
 	StartActivity(HomeStewardship)
-End Sub
-
-Sub Donation_Click
-	StartActivity(DonationStewardship)
 End Sub
 
 Sub Qurban_Click

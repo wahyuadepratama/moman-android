@@ -13,7 +13,7 @@ Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
 	Private xui As XUI
-	Dim idSelected, statusSelected As String
+	Dim invoiceSelected As String
 End Sub
 
 Sub Globals
@@ -29,8 +29,8 @@ Sub Globals
 	Private TransName As Label
 	Private DateTrans As Label
 	Private TotalTrans As Label
-	Private Id As Label	
-	Private CheckingStatus As Label
+	Private Id As Label		
+	Private statusTransc As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -47,30 +47,25 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 
 Sub Activity_Resume
-	CLV.Clear
-	CodeSemua.ExecuteUrlGet(Main.server&"api/history?id="&HomeJamaah.id,"LoadData",Me)
+	CLV.Clear'
+	CodeSemua.ExecuteUrlGet(Main.server&"api/qurban/history?user="&Main.id,"LoadData",Me)
+	Log("ID: "&Main.id)
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
-Private Sub CreateItem(Width As Int, idtrx As String, title As String, date As String, fund As String, confirm As Boolean) As Panel
+Private Sub CreateItem(Width As Int, idtrx As String, date As String, confirm As String) As Panel
 	Dim p As B4XView = xui.CreatePanel("")
 	
 	p.SetLayoutAnimated(0, 0, 0, Width, 30%y)
 	p.LoadLayout("ListHistoryJamaah")
 	
-	If confirm = False Then
-		TotalTrans.Text = fund&" (Checking)"
-	Else
-		TotalTrans.Text = fund&" (Confirmed)"
-	End If
-	
 	Id.Text = idtrx
 	DateTrans.Text = date
-	TransName.Text = "#"&idtrx&" ("&title&")"
-	CheckingStatus.Text = confirm
+	TransName.Text = idtrx
+	statusTransc.Text = confirm	
 	
 	Return p
 End Sub
@@ -84,7 +79,7 @@ Sub JobDone (Job As HttpJob)
 		Dim parser As JSONParser 'mengambil data dalam bentuk json menjadi array
 		parser.Initialize(res)
 		
-		'Log("Response from server :"& res)
+		Log("Response from server :"& res)
 		Select Job.JobName
 			Case "LoadData"
 				Try
@@ -96,7 +91,7 @@ Sub JobDone (Job As HttpJob)
 							Dim a As Map
 							a = data.Get(i)
 							'Log("NAMAE: "&a.Get("name"))
-							CLV.Add(CreateItem(CLV.AsView.Width, a.Get("id"), a.Get("donation_name"),"Datetime: "&a.Get("datetime"),"Total Infaq: "&a.Get("fund"), a.Get("confirmation")),"")
+							CLV.Add(CreateItem(CLV.AsView.Width, a.Get("invoice"), a.Get("date"),a.Get("payment_completed")),"")
 							CLV.AsView.Height = (PanelListItem.Height+1.4%y) *CLV.Size
 						Next
 											
@@ -131,8 +126,7 @@ Sub PanelListItem_Click
 	Dim a As B4XView
 	a = p.GetView(0)
 	
-	idSelected=a.GetView(0).GetView(4).Text
-	statusSelected=a.GetView(0).GetView(5).Text	
+	invoiceSelected = a.GetView(0).GetView(4).Text	
 	StartActivity(InvoiceJamaah)
 End Sub
 

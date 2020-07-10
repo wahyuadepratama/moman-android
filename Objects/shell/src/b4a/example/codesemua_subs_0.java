@@ -8,7 +8,7 @@ public class codesemua_subs_0 {
 
 public static RemoteObject  _executeurl(RemoteObject _ba,RemoteObject _url,RemoteObject _parameters,RemoteObject _jobname,RemoteObject _objek) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteUrl (codesemua) ","codesemua",14,_ba,codesemua.mostCurrent,21);
+		Debug.PushSubsStack("ExecuteUrl (codesemua) ","codesemua",5,_ba,codesemua.mostCurrent,21);
 if (RapidSub.canDelegate("executeurl")) return b4a.example.codesemua.remoteMe.runUserSub(false, "codesemua","executeurl", _ba, _url, _parameters, _jobname, _objek);
 RemoteObject _job = RemoteObject.declareNull("anywheresoftware.b4a.samples.httputils2.httpjob");
 ;
@@ -39,7 +39,7 @@ finally {
 		}}
 public static RemoteObject  _executeurlget(RemoteObject _ba,RemoteObject _url,RemoteObject _jobname,RemoteObject _objek) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteUrlGet (codesemua) ","codesemua",14,_ba,codesemua.mostCurrent,27);
+		Debug.PushSubsStack("ExecuteUrlGet (codesemua) ","codesemua",5,_ba,codesemua.mostCurrent,27);
 if (RapidSub.canDelegate("executeurlget")) return b4a.example.codesemua.remoteMe.runUserSub(false, "codesemua","executeurlget", _ba, _url, _jobname, _objek);
 RemoteObject _job = RemoteObject.declareNull("anywheresoftware.b4a.samples.httputils2.httpjob");
 ;
@@ -74,7 +74,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _setbackgroundtintlist(RemoteObject _ba,RemoteObject _view,RemoteObject _active,RemoteObject _enabled) throws Exception{
 try {
-		Debug.PushSubsStack("SetBackgroundTintList (codesemua) ","codesemua",14,_ba,codesemua.mostCurrent,9);
+		Debug.PushSubsStack("SetBackgroundTintList (codesemua) ","codesemua",5,_ba,codesemua.mostCurrent,9);
 if (RapidSub.canDelegate("setbackgroundtintlist")) return b4a.example.codesemua.remoteMe.runUserSub(false, "codesemua","setbackgroundtintlist", _ba, _view, _active, _enabled);
 RemoteObject _states = null;
 RemoteObject _color = null;
@@ -125,7 +125,7 @@ finally {
 		}}
 public static RemoteObject  _setcbdrawable(RemoteObject _ba,RemoteObject _cb,RemoteObject _boxcolor,RemoteObject _boxwidth,RemoteObject _tickcolor,RemoteObject _tickchar,RemoteObject _disabledcolor,RemoteObject _size,RemoteObject _padding) throws Exception{
 try {
-		Debug.PushSubsStack("SetCBDrawable (codesemua) ","codesemua",14,_ba,codesemua.mostCurrent,33);
+		Debug.PushSubsStack("SetCBDrawable (codesemua) ","codesemua",5,_ba,codesemua.mostCurrent,33);
 if (RapidSub.canDelegate("setcbdrawable")) return b4a.example.codesemua.remoteMe.runUserSub(false, "codesemua","setcbdrawable", _ba, _cb, _boxcolor, _boxwidth, _tickcolor, _tickchar, _disabledcolor, _size, _padding);
 RemoteObject _sld = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.StateListDrawable");
 RemoteObject _bmenabled = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper");

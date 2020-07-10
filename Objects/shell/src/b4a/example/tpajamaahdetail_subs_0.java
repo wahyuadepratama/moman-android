@@ -8,7 +8,7 @@ public class tpajamaahdetail_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,30);
+		Debug.PushSubsStack("Activity_Create (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,30);
 if (RapidSub.canDelegate("activity_create")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 30;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -43,7 +43,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,45);
+		Debug.PushSubsStack("Activity_Pause (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,45);
 if (RapidSub.canDelegate("activity_pause")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 45;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -60,7 +60,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,41);
+		Debug.PushSubsStack("Activity_Resume (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,41);
 if (RapidSub.canDelegate("activity_resume")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","activity_resume");
  BA.debugLineNum = 41;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(256);
@@ -79,7 +79,7 @@ finally {
 		}}
 public static RemoteObject  _button1_click() throws Exception{
 try {
-		Debug.PushSubsStack("Button1_Click (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,96);
+		Debug.PushSubsStack("Button1_Click (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,96);
 if (RapidSub.canDelegate("button1_click")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","button1_click");
  BA.debugLineNum = 96;BA.debugLine="Sub Button1_Click";
 Debug.ShouldStop(-2147483648);
@@ -98,7 +98,7 @@ finally {
 		}}
 public static RemoteObject  _checkguna_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("CheckGuna_CheckedChange (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,100);
+		Debug.PushSubsStack("CheckGuna_CheckedChange (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,100);
 if (RapidSub.canDelegate("checkguna_checkedchange")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","checkguna_checkedchange", _checked);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 100;BA.debugLine="Sub CheckGuna_CheckedChange(Checked As Boolean)";
@@ -138,7 +138,7 @@ finally {
 		}}
 public static RemoteObject  _checkhamba_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("CheckHamba_CheckedChange (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,112);
+		Debug.PushSubsStack("CheckHamba_CheckedChange (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,112);
 if (RapidSub.canDelegate("checkhamba_checkedchange")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","checkhamba_checkedchange", _checked);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 112;BA.debugLine="Sub CheckHamba_CheckedChange(Checked As Boolean)";
@@ -209,7 +209,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,49);
+		Debug.PushSubsStack("JobDone (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,49);
 if (RapidSub.canDelegate("jobdone")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","jobdone", _job);
 RemoteObject _parser = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.JSONParser");
 RemoteObject _root = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
@@ -330,7 +330,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _spinpengurus_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("SpinPengurus_ItemClick (tpajamaahdetail) ","tpajamaahdetail",16,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,124);
+		Debug.PushSubsStack("SpinPengurus_ItemClick (tpajamaahdetail) ","tpajamaahdetail",17,tpajamaahdetail.mostCurrent.activityBA,tpajamaahdetail.mostCurrent,124);
 if (RapidSub.canDelegate("spinpengurus_itemclick")) return b4a.example.tpajamaahdetail.remoteMe.runUserSub(false, "tpajamaahdetail","spinpengurus_itemclick", _position, _value);
 int _i = 0;
 RemoteObject _accountdata = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");

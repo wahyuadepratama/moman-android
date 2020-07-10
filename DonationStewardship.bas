@@ -51,7 +51,7 @@ End Sub
 
 Sub Activity_Resume
 	CLV.Clear
-	CodeSemua.ExecuteUrlGet(Main.server&"api/donation/confirmation?id="&HomeStewardship.worship,"LoadData",Me)
+	CodeSemua.ExecuteUrlGet(Main.server&"api/qurban/confirmation?id="&HomeStewardship.id,"LoadData",Me)
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)

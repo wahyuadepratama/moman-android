@@ -74,27 +74,26 @@ public static RemoteObject _navbartitle = RemoteObject.declareNull("anywheresoft
 public static RemoteObject _httputils2service = RemoteObject.declareNull("anywheresoftware.b4a.samples.httputils2.httputils2service");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
 public static b4a.example.homejamaah _homejamaah = null;
 public static b4a.example.qurbanjamaah _qurbanjamaah = null;
-public static b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
-public static b4a.example.orphansjamaahdetail _orphansjamaahdetail = null;
-public static b4a.example.donationstewardship _donationstewardship = null;
-public static b4a.example.donationjamaahdetail _donationjamaahdetail = null;
+public static b4a.example.codesemua _codesemua = null;
+public static b4a.example.poorjamaahdetail _poorjamaahdetail = null;
+public static b4a.example.invoicejamaah _invoicejamaah = null;
+public static b4a.example.historyjamaah _historyjamaah = null;
 public static b4a.example.homestewardship _homestewardship = null;
+public static b4a.example.orphansjamaahdetail _orphansjamaahdetail = null;
+public static b4a.example.donationjamaahdetail _donationjamaahdetail = null;
 public static b4a.example.qurbanstewardship _qurbanstewardship = null;
 public static b4a.example.orphansjamaah _orphansjamaah = null;
-public static b4a.example.historyjamaah _historyjamaah = null;
 public static b4a.example.donationjamaah _donationjamaah = null;
-public static b4a.example.codesemua _codesemua = null;
 public static b4a.example.tpajamaah _tpajamaah = null;
 public static b4a.example.tpajamaahdetail _tpajamaahdetail = null;
-public static b4a.example.poorjamaahdetail _poorjamaahdetail = null;
 public static b4a.example.poorjamaah _poorjamaah = null;
-public static b4a.example.invoicejamaah _invoicejamaah = null;
 public static b4a.example.starter2 _starter2 = null;
 public static b4a.example.qurbanstewardshipdetail _qurbanstewardshipdetail = null;
 public static b4a.example.webview _webview = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",mapsjamaah.mostCurrent._activity,"btnSearch",mapsjamaah.mostCurrent._btnsearch,"capacities",mapsjamaah.mostCurrent._capacities,"CodeSemua",Debug.moduleToString(b4a.example.codesemua.class),"DonationJamaah",Debug.moduleToString(b4a.example.donationjamaah.class),"DonationJamaahDetail",Debug.moduleToString(b4a.example.donationjamaahdetail.class),"DonationStewardship",Debug.moduleToString(b4a.example.donationstewardship.class),"EditName",mapsjamaah.mostCurrent._editname,"events",mapsjamaah.mostCurrent._events,"facilities",mapsjamaah.mostCurrent._facilities,"HistoryJamaah",Debug.moduleToString(b4a.example.historyjamaah.class),"HomeJamaah",Debug.moduleToString(b4a.example.homejamaah.class),"HomeStewardship",Debug.moduleToString(b4a.example.homestewardship.class),"HttpUtils2Service",mapsjamaah.mostCurrent._httputils2service,"InvoiceJamaah",Debug.moduleToString(b4a.example.invoicejamaah.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainScroll",mapsjamaah.mostCurrent._mainscroll,"MyWebViewExtras",mapsjamaah.mostCurrent._mywebviewextras,"MyWebViewSetting",mapsjamaah.mostCurrent._mywebviewsetting,"NavbarTitle",mapsjamaah.mostCurrent._navbartitle,"OrphansJamaah",Debug.moduleToString(b4a.example.orphansjamaah.class),"OrphansJamaahDetail",Debug.moduleToString(b4a.example.orphansjamaahdetail.class),"PanelMaps",mapsjamaah.mostCurrent._panelmaps,"parking",mapsjamaah.mostCurrent._parking,"PoorJamaah",Debug.moduleToString(b4a.example.poorjamaah.class),"PoorJamaahDetail",Debug.moduleToString(b4a.example.poorjamaahdetail.class),"QurbanJamaah",Debug.moduleToString(b4a.example.qurbanjamaah.class),"QurbanJamaahDetail",Debug.moduleToString(b4a.example.qurbanjamaahdetail.class),"QurbanStewardship",Debug.moduleToString(b4a.example.qurbanstewardship.class),"QurbanStewardshipDetail",Debug.moduleToString(b4a.example.qurbanstewardshipdetail.class),"SpinCapacity",mapsjamaah.mostCurrent._spincapacity,"SpinEvent",mapsjamaah.mostCurrent._spinevent,"SpinFacility",mapsjamaah.mostCurrent._spinfacility,"SpinParking",mapsjamaah.mostCurrent._spinparking,"Starter",Debug.moduleToString(b4a.example.starter.class),"Starter2",Debug.moduleToString(b4a.example.starter2.class),"TpaJamaah",Debug.moduleToString(b4a.example.tpajamaah.class),"TpaJamaahDetail",Debug.moduleToString(b4a.example.tpajamaahdetail.class),"WebView",Debug.moduleToString(b4a.example.webview.class),"WebView1",mapsjamaah.mostCurrent._webview1};
+		return new Object[] {"Activity",mapsjamaah.mostCurrent._activity,"btnSearch",mapsjamaah.mostCurrent._btnsearch,"capacities",mapsjamaah.mostCurrent._capacities,"CodeSemua",Debug.moduleToString(b4a.example.codesemua.class),"DonationJamaah",Debug.moduleToString(b4a.example.donationjamaah.class),"DonationJamaahDetail",Debug.moduleToString(b4a.example.donationjamaahdetail.class),"EditName",mapsjamaah.mostCurrent._editname,"events",mapsjamaah.mostCurrent._events,"facilities",mapsjamaah.mostCurrent._facilities,"HistoryJamaah",Debug.moduleToString(b4a.example.historyjamaah.class),"HomeJamaah",Debug.moduleToString(b4a.example.homejamaah.class),"HomeStewardship",Debug.moduleToString(b4a.example.homestewardship.class),"HttpUtils2Service",mapsjamaah.mostCurrent._httputils2service,"InvoiceJamaah",Debug.moduleToString(b4a.example.invoicejamaah.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainScroll",mapsjamaah.mostCurrent._mainscroll,"MyWebViewExtras",mapsjamaah.mostCurrent._mywebviewextras,"MyWebViewSetting",mapsjamaah.mostCurrent._mywebviewsetting,"NavbarTitle",mapsjamaah.mostCurrent._navbartitle,"OrphansJamaah",Debug.moduleToString(b4a.example.orphansjamaah.class),"OrphansJamaahDetail",Debug.moduleToString(b4a.example.orphansjamaahdetail.class),"PanelMaps",mapsjamaah.mostCurrent._panelmaps,"parking",mapsjamaah.mostCurrent._parking,"PoorJamaah",Debug.moduleToString(b4a.example.poorjamaah.class),"PoorJamaahDetail",Debug.moduleToString(b4a.example.poorjamaahdetail.class),"QurbanJamaah",Debug.moduleToString(b4a.example.qurbanjamaah.class),"QurbanJamaahDetail",Debug.moduleToString(b4a.example.qurbanjamaahdetail.class),"QurbanStewardship",Debug.moduleToString(b4a.example.qurbanstewardship.class),"QurbanStewardshipDetail",Debug.moduleToString(b4a.example.qurbanstewardshipdetail.class),"SpinCapacity",mapsjamaah.mostCurrent._spincapacity,"SpinEvent",mapsjamaah.mostCurrent._spinevent,"SpinFacility",mapsjamaah.mostCurrent._spinfacility,"SpinParking",mapsjamaah.mostCurrent._spinparking,"Starter",Debug.moduleToString(b4a.example.starter.class),"Starter2",Debug.moduleToString(b4a.example.starter2.class),"TpaJamaah",Debug.moduleToString(b4a.example.tpajamaah.class),"TpaJamaahDetail",Debug.moduleToString(b4a.example.tpajamaahdetail.class),"WebView",Debug.moduleToString(b4a.example.webview.class),"WebView1",mapsjamaah.mostCurrent._webview1};
 }
 }

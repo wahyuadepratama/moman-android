@@ -53,6 +53,13 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
+			android:name=".qurbanjamaahdetail"
+			android:label="Moman"
+			android:screenOrientation="unspecified">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
 			android:name=".homejamaah"
 			android:label="Moman"
 			android:screenOrientation="unspecified">
@@ -67,7 +74,28 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".qurbanjamaahdetail"
+			android:name=".poorjamaahdetail"
+			android:label="Moman"
+			android:screenOrientation="unspecified">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".invoicejamaah"
+			android:label="Moman"
+			android:screenOrientation="unspecified">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".historyjamaah"
+			android:label="Moman"
+			android:screenOrientation="unspecified">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".homestewardship"
 			android:label="Moman"
 			android:screenOrientation="unspecified">
 		</activity>
@@ -88,21 +116,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".donationstewardship"
-			android:label="Moman"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".donationjamaahdetail"
-			android:label="Moman"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".homestewardship"
 			android:label="Moman"
 			android:screenOrientation="unspecified">
 		</activity>
@@ -117,13 +131,6 @@
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".orphansjamaah"
-			android:label="Moman"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".historyjamaah"
 			android:label="Moman"
 			android:screenOrientation="unspecified">
 		</activity>
@@ -151,21 +158,7 @@
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
-			android:name=".poorjamaahdetail"
-			android:label="Moman"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
 			android:name=".poorjamaah"
-			android:label="Moman"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".invoicejamaah"
 			android:label="Moman"
 			android:screenOrientation="unspecified">
 		</activity>

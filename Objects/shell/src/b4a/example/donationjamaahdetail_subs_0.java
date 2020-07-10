@@ -8,7 +8,7 @@ public class donationjamaahdetail_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,38);
+		Debug.PushSubsStack("Activity_Create (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,38);
 if (RapidSub.canDelegate("activity_create")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 38;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -43,7 +43,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,54);
+		Debug.PushSubsStack("Activity_Pause (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,54);
 if (RapidSub.canDelegate("activity_pause")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 54;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -60,7 +60,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,50);
+		Debug.PushSubsStack("Activity_Resume (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,50);
 if (RapidSub.canDelegate("activity_resume")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","activity_resume");
  BA.debugLineNum = 50;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(131072);
@@ -79,7 +79,7 @@ finally {
 		}}
 public static RemoteObject  _button1_click() throws Exception{
 try {
-		Debug.PushSubsStack("Button1_Click (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,134);
+		Debug.PushSubsStack("Button1_Click (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,134);
 if (RapidSub.canDelegate("button1_click")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","button1_click");
  BA.debugLineNum = 134;BA.debugLine="Sub Button1_Click";
 Debug.ShouldStop(32);
@@ -98,7 +98,7 @@ finally {
 		}}
 public static RemoteObject  _checkguna_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("CheckGuna_CheckedChange (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,138);
+		Debug.PushSubsStack("CheckGuna_CheckedChange (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,138);
 if (RapidSub.canDelegate("checkguna_checkedchange")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","checkguna_checkedchange", _checked);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 138;BA.debugLine="Sub CheckGuna_CheckedChange(Checked As Boolean)";
@@ -138,7 +138,7 @@ finally {
 		}}
 public static RemoteObject  _checkhamba_checkedchange(RemoteObject _checked) throws Exception{
 try {
-		Debug.PushSubsStack("CheckHamba_CheckedChange (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,150);
+		Debug.PushSubsStack("CheckHamba_CheckedChange (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,150);
 if (RapidSub.canDelegate("checkhamba_checkedchange")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","checkhamba_checkedchange", _checked);
 Debug.locals.put("Checked", _checked);
  BA.debugLineNum = 150;BA.debugLine="Sub CheckHamba_CheckedChange(Checked As Boolean)";
@@ -225,7 +225,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,58);
+		Debug.PushSubsStack("JobDone (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,58);
 if (RapidSub.canDelegate("jobdone")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","jobdone", _job);
 RemoteObject _parser = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.JSONParser");
 RemoteObject _root = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
@@ -456,7 +456,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _spinpengurus_itemclick(RemoteObject _position,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("SpinPengurus_ItemClick (donationjamaahdetail) ","donationjamaahdetail",8,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,162);
+		Debug.PushSubsStack("SpinPengurus_ItemClick (donationjamaahdetail) ","donationjamaahdetail",12,donationjamaahdetail.mostCurrent.activityBA,donationjamaahdetail.mostCurrent,162);
 if (RapidSub.canDelegate("spinpengurus_itemclick")) return b4a.example.donationjamaahdetail.remoteMe.runUserSub(false, "donationjamaahdetail","spinpengurus_itemclick", _position, _value);
 int _i = 0;
 RemoteObject _accountdata = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");

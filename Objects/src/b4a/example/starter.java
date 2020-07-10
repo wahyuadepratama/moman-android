@@ -131,24 +131,23 @@ public static String _lat = "";
 public static String _lang = "";
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public b4a.example.main _main = null;
+public b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
 public b4a.example.homejamaah _homejamaah = null;
 public b4a.example.qurbanjamaah _qurbanjamaah = null;
-public b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
+public b4a.example.codesemua _codesemua = null;
+public b4a.example.poorjamaahdetail _poorjamaahdetail = null;
+public b4a.example.invoicejamaah _invoicejamaah = null;
+public b4a.example.historyjamaah _historyjamaah = null;
+public b4a.example.homestewardship _homestewardship = null;
 public b4a.example.orphansjamaahdetail _orphansjamaahdetail = null;
 public b4a.example.mapsjamaah _mapsjamaah = null;
-public b4a.example.donationstewardship _donationstewardship = null;
 public b4a.example.donationjamaahdetail _donationjamaahdetail = null;
-public b4a.example.homestewardship _homestewardship = null;
 public b4a.example.qurbanstewardship _qurbanstewardship = null;
 public b4a.example.orphansjamaah _orphansjamaah = null;
-public b4a.example.historyjamaah _historyjamaah = null;
 public b4a.example.donationjamaah _donationjamaah = null;
-public b4a.example.codesemua _codesemua = null;
 public b4a.example.tpajamaah _tpajamaah = null;
 public b4a.example.tpajamaahdetail _tpajamaahdetail = null;
-public b4a.example.poorjamaahdetail _poorjamaahdetail = null;
 public b4a.example.poorjamaah _poorjamaah = null;
-public b4a.example.invoicejamaah _invoicejamaah = null;
 public b4a.example.starter2 _starter2 = null;
 public b4a.example.qurbanstewardshipdetail _qurbanstewardshipdetail = null;
 public b4a.example.webview _webview = null;
@@ -169,13 +168,13 @@ public static boolean  _application_error(anywheresoftware.b4a.objects.B4AExcept
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "application_error"))
 	return (Boolean) Debug.delegate(processBA, "application_error", new Object[] {_error,_stacktrace});
-RDebugUtils.currentLine=589824;
- //BA.debugLineNum = 589824;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
-RDebugUtils.currentLine=589825;
- //BA.debugLineNum = 589825;BA.debugLine="Return True";
+RDebugUtils.currentLine=1245184;
+ //BA.debugLineNum = 1245184;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
+RDebugUtils.currentLine=1245185;
+ //BA.debugLineNum = 1245185;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
-RDebugUtils.currentLine=589826;
- //BA.debugLineNum = 589826;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1245186;
+ //BA.debugLineNum = 1245186;BA.debugLine="End Sub";
 return false;
 }
 public static anywheresoftware.b4a.objects.drawable.CanvasWrapper  _createbitmap() throws Exception{
@@ -325,51 +324,51 @@ if (Debug.shouldDelegate(processBA, "gps_gpsstatus"))
 anywheresoftware.b4a.keywords.StringBuilderWrapper _sb = null;
 int _i = 0;
 anywheresoftware.b4a.gps.GpsSatelliteWrapper _satellite = null;
-RDebugUtils.currentLine=1310720;
- //BA.debugLineNum = 1310720;BA.debugLine="Sub GPS_GpsStatus (Satellites As List)";
-RDebugUtils.currentLine=1310721;
- //BA.debugLineNum = 1310721;BA.debugLine="Dim sb As StringBuilder";
+RDebugUtils.currentLine=1114112;
+ //BA.debugLineNum = 1114112;BA.debugLine="Sub GPS_GpsStatus (Satellites As List)";
+RDebugUtils.currentLine=1114113;
+ //BA.debugLineNum = 1114113;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
-RDebugUtils.currentLine=1310722;
- //BA.debugLineNum = 1310722;BA.debugLine="sb.Initialize";
+RDebugUtils.currentLine=1114114;
+ //BA.debugLineNum = 1114114;BA.debugLine="sb.Initialize";
 _sb.Initialize();
-RDebugUtils.currentLine=1310723;
- //BA.debugLineNum = 1310723;BA.debugLine="sb.Append(\"Satellites:\").Append(CRLF)";
+RDebugUtils.currentLine=1114115;
+ //BA.debugLineNum = 1114115;BA.debugLine="sb.Append(\"Satellites:\").Append(CRLF)";
 _sb.Append("Satellites:").Append(anywheresoftware.b4a.keywords.Common.CRLF);
-RDebugUtils.currentLine=1310724;
- //BA.debugLineNum = 1310724;BA.debugLine="For i = 0 To Satellites.Size - 1";
+RDebugUtils.currentLine=1114116;
+ //BA.debugLineNum = 1114116;BA.debugLine="For i = 0 To Satellites.Size - 1";
 {
 final int step4 = 1;
 final int limit4 = (int) (_satellites.getSize()-1);
 _i = (int) (0) ;
 for (;(step4 > 0 && _i <= limit4) || (step4 < 0 && _i >= limit4) ;_i = ((int)(0 + _i + step4))  ) {
-RDebugUtils.currentLine=1310725;
- //BA.debugLineNum = 1310725;BA.debugLine="Dim Satellite As GPSSatellite = Satellites.Get(i";
+RDebugUtils.currentLine=1114117;
+ //BA.debugLineNum = 1114117;BA.debugLine="Dim Satellite As GPSSatellite = Satellites.Get(i";
 _satellite = new anywheresoftware.b4a.gps.GpsSatelliteWrapper();
 _satellite.setObject((android.location.GpsSatellite)(_satellites.Get(_i)));
-RDebugUtils.currentLine=1310726;
- //BA.debugLineNum = 1310726;BA.debugLine="sb.Append(CRLF).Append(Satellite.Prn).Append($\"";
+RDebugUtils.currentLine=1114118;
+ //BA.debugLineNum = 1114118;BA.debugLine="sb.Append(CRLF).Append(Satellite.Prn).Append($\"";
 _sb.Append(anywheresoftware.b4a.keywords.Common.CRLF).Append(BA.NumberToString(_satellite.getPrn())).Append((" "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("1.2",(Object)(_satellite.getSnr()))+"")).Append(" ").Append(BA.ObjectToString(_satellite.getUsedInFix()));
-RDebugUtils.currentLine=1310727;
- //BA.debugLineNum = 1310727;BA.debugLine="sb.Append(\" \").Append($\" $1.2{Satellite.Azimuth}";
+RDebugUtils.currentLine=1114119;
+ //BA.debugLineNum = 1114119;BA.debugLine="sb.Append(\" \").Append($\" $1.2{Satellite.Azimuth}";
 _sb.Append(" ").Append((" "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("1.2",(Object)(_satellite.getAzimuth()))+"")).Append((" "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("1.2",(Object)(_satellite.getElevation()))+""));
  }
 };
-RDebugUtils.currentLine=1310729;
- //BA.debugLineNum = 1310729;BA.debugLine="Log( sb.ToString)";
+RDebugUtils.currentLine=1114121;
+ //BA.debugLineNum = 1114121;BA.debugLine="Log( sb.ToString)";
 anywheresoftware.b4a.keywords.Common.Log(_sb.ToString());
-RDebugUtils.currentLine=1310730;
- //BA.debugLineNum = 1310730;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1114122;
+ //BA.debugLineNum = 1114122;BA.debugLine="End Sub";
 return "";
 }
 public static String  _gps_locationchanged(anywheresoftware.b4a.gps.LocationWrapper _location1) throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "gps_locationchanged"))
 	return (String) Debug.delegate(processBA, "gps_locationchanged", new Object[] {_location1});
-RDebugUtils.currentLine=1245184;
- //BA.debugLineNum = 1245184;BA.debugLine="Sub GPS_LocationChanged (Location1 As Location)";
-RDebugUtils.currentLine=1245188;
- //BA.debugLineNum = 1245188;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1048576;
+ //BA.debugLineNum = 1048576;BA.debugLine="Sub GPS_LocationChanged (Location1 As Location)";
+RDebugUtils.currentLine=1048580;
+ //BA.debugLineNum = 1048580;BA.debugLine="End Sub";
 return "";
 }
 public static String  _gpsstatus(anywheresoftware.b4a.objects.collections.List _satellites) throws Exception{
@@ -514,95 +513,95 @@ public static String  _service_create() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_create"))
 	return (String) Debug.delegate(processBA, "service_create", null);
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Sub Service_Create";
-RDebugUtils.currentLine=393219;
- //BA.debugLineNum = 393219;BA.debugLine="tasks.Initialize";
+RDebugUtils.currentLine=786432;
+ //BA.debugLineNum = 786432;BA.debugLine="Sub Service_Create";
+RDebugUtils.currentLine=786435;
+ //BA.debugLineNum = 786435;BA.debugLine="tasks.Initialize";
 _tasks.Initialize();
-RDebugUtils.currentLine=393220;
- //BA.debugLineNum = 393220;BA.debugLine="cache.Initialize";
+RDebugUtils.currentLine=786436;
+ //BA.debugLineNum = 786436;BA.debugLine="cache.Initialize";
 _cache.Initialize();
-RDebugUtils.currentLine=393221;
- //BA.debugLineNum = 393221;BA.debugLine="ongoingTasks.Initialize";
+RDebugUtils.currentLine=786437;
+ //BA.debugLineNum = 786437;BA.debugLine="ongoingTasks.Initialize";
 _ongoingtasks.Initialize();
-RDebugUtils.currentLine=393222;
- //BA.debugLineNum = 393222;BA.debugLine="GPS1.Initialize(\"GPS\")";
+RDebugUtils.currentLine=786438;
+ //BA.debugLineNum = 786438;BA.debugLine="GPS1.Initialize(\"GPS\")";
 _gps1.Initialize("GPS");
-RDebugUtils.currentLine=393223;
- //BA.debugLineNum = 393223;BA.debugLine="End Sub";
+RDebugUtils.currentLine=786439;
+ //BA.debugLineNum = 786439;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_destroy() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_destroy"))
 	return (String) Debug.delegate(processBA, "service_destroy", null);
-RDebugUtils.currentLine=655360;
- //BA.debugLineNum = 655360;BA.debugLine="Sub Service_Destroy";
-RDebugUtils.currentLine=655361;
- //BA.debugLineNum = 655361;BA.debugLine="StopGps";
+RDebugUtils.currentLine=1310720;
+ //BA.debugLineNum = 1310720;BA.debugLine="Sub Service_Destroy";
+RDebugUtils.currentLine=1310721;
+ //BA.debugLineNum = 1310721;BA.debugLine="StopGps";
 _stopgps();
-RDebugUtils.currentLine=655362;
- //BA.debugLineNum = 655362;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1310722;
+ //BA.debugLineNum = 1310722;BA.debugLine="End Sub";
 return "";
 }
 public static String  _stopgps() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "stopgps"))
 	return (String) Debug.delegate(processBA, "stopgps", null);
-RDebugUtils.currentLine=1179648;
- //BA.debugLineNum = 1179648;BA.debugLine="Public Sub StopGps";
-RDebugUtils.currentLine=1179649;
- //BA.debugLineNum = 1179649;BA.debugLine="If gpsStarted Then";
+RDebugUtils.currentLine=983040;
+ //BA.debugLineNum = 983040;BA.debugLine="Public Sub StopGps";
+RDebugUtils.currentLine=983041;
+ //BA.debugLineNum = 983041;BA.debugLine="If gpsStarted Then";
 if (_gpsstarted) { 
-RDebugUtils.currentLine=1179650;
- //BA.debugLineNum = 1179650;BA.debugLine="GPS1.Stop";
+RDebugUtils.currentLine=983042;
+ //BA.debugLineNum = 983042;BA.debugLine="GPS1.Stop";
 _gps1.Stop();
-RDebugUtils.currentLine=1179651;
- //BA.debugLineNum = 1179651;BA.debugLine="gpsStarted = False";
+RDebugUtils.currentLine=983043;
+ //BA.debugLineNum = 983043;BA.debugLine="gpsStarted = False";
 _gpsstarted = anywheresoftware.b4a.keywords.Common.False;
  };
-RDebugUtils.currentLine=1179653;
- //BA.debugLineNum = 1179653;BA.debugLine="End Sub";
+RDebugUtils.currentLine=983045;
+ //BA.debugLineNum = 983045;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_start(anywheresoftware.b4a.objects.IntentWrapper _startingintent) throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_start"))
 	return (String) Debug.delegate(processBA, "service_start", new Object[] {_startingintent});
-RDebugUtils.currentLine=458752;
- //BA.debugLineNum = 458752;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
-RDebugUtils.currentLine=458755;
- //BA.debugLineNum = 458755;BA.debugLine="End Sub";
+RDebugUtils.currentLine=851968;
+ //BA.debugLineNum = 851968;BA.debugLine="Sub Service_Start (StartingIntent As Intent)";
+RDebugUtils.currentLine=851971;
+ //BA.debugLineNum = 851971;BA.debugLine="End Sub";
 return "";
 }
 public static String  _service_taskremoved() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "service_taskremoved"))
 	return (String) Debug.delegate(processBA, "service_taskremoved", null);
-RDebugUtils.currentLine=524288;
- //BA.debugLineNum = 524288;BA.debugLine="Sub Service_TaskRemoved";
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1179648;
+ //BA.debugLineNum = 1179648;BA.debugLine="Sub Service_TaskRemoved";
+RDebugUtils.currentLine=1179650;
+ //BA.debugLineNum = 1179650;BA.debugLine="End Sub";
 return "";
 }
 public static String  _startgps() throws Exception{
 RDebugUtils.currentModule="starter";
 if (Debug.shouldDelegate(processBA, "startgps"))
 	return (String) Debug.delegate(processBA, "startgps", null);
-RDebugUtils.currentLine=1114112;
- //BA.debugLineNum = 1114112;BA.debugLine="Public Sub StartGps";
-RDebugUtils.currentLine=1114113;
- //BA.debugLineNum = 1114113;BA.debugLine="If gpsStarted = False Then";
+RDebugUtils.currentLine=917504;
+ //BA.debugLineNum = 917504;BA.debugLine="Public Sub StartGps";
+RDebugUtils.currentLine=917505;
+ //BA.debugLineNum = 917505;BA.debugLine="If gpsStarted = False Then";
 if (_gpsstarted==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=1114114;
- //BA.debugLineNum = 1114114;BA.debugLine="GPS1.Start(0, 0)";
+RDebugUtils.currentLine=917506;
+ //BA.debugLineNum = 917506;BA.debugLine="GPS1.Start(0, 0)";
 _gps1.Start(processBA,(long) (0),(float) (0));
-RDebugUtils.currentLine=1114115;
- //BA.debugLineNum = 1114115;BA.debugLine="gpsStarted = True";
+RDebugUtils.currentLine=917507;
+ //BA.debugLineNum = 917507;BA.debugLine="gpsStarted = True";
 _gpsstarted = anywheresoftware.b4a.keywords.Common.True;
  };
-RDebugUtils.currentLine=1114117;
- //BA.debugLineNum = 1114117;BA.debugLine="End Sub";
+RDebugUtils.currentLine=917509;
+ //BA.debugLineNum = 917509;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -12,7 +12,7 @@ Version=8
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-	
+	Dim invoiceSelected As String
 End Sub
 
 Sub Globals
@@ -21,13 +21,16 @@ Sub Globals
 	Private MainScroll As ScrollView
 	Private Navbar As Panel
 	Private NavbarTitle As Label
+	Private MosqueName As Label
+	Private DeadlinePayment As Label
+	Private EditText1 As EditText
 	
 	Private PanelQurban As Panel
 	Private SpinPengurus As Spinner
 	Private SpinType As Spinner
 	
 	Dim pengurus As Map
-	Dim types As Map
+	Dim types As Map	
 	
 	Private Button1 As Button
 	
@@ -35,7 +38,7 @@ Sub Globals
 	Dim accountId, publicId, noTransaction As String
 	Dim account As List : account.Initialize
 	Dim animal_type As List : animal_type.Initialize
-	Private PanelPaidInfo As Panel
+	Private PanelPaidInfo As Panel	
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -50,6 +53,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	types.Initialize
 	
 	SpinPengurus.DropdownBackgroundColor= Colors.White
+	MosqueName.TextColor= Colors.Black
+	DeadlinePayment.TextColor= Colors.Black
 '	SpinType.DropdownBackgroundColor= Colors.White
 	
 	NavbarTitle.Text = "Detail Qurban"
@@ -57,53 +62,54 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	SpinPengurus.Add("Pilih Group")
 	SpinPengurus.Add("Group 01")
+	SpinPengurus.Add("Group 02")
+	SpinPengurus.Add("Group 03")
+	SpinPengurus.Add("Group 04")
+	SpinPengurus.Add("Group 05")
+	SpinPengurus.Add("Group 06")
+	SpinPengurus.Add("Group 07")
+	
 End Sub
 
 Sub Activity_Resume
 	CodeSemua.ExecuteUrlGet(Main.server&"api/qurban/detail?id="&QurbanJamaah.idSelected,"LoadData",Me)
+	Log(Main.id)
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
-'Sub JobDone (Job As HttpJob)
-'	If Job.Success = True Then		
-'			
-'		Dim parser As JSONParser
-'		parser.Initialize(Job.GetString)
-'		Dim root As Map = parser.NextObject		
-'						
-'		NavbarTitle.Text = "Qurban "&root.Get("name")
-'		NavbarTitle.TextSize = 20
-'			
-'		account = root.Get("account")
-'		animal_type = root.Get("animal_type")
-'	
-'		If account.Size = 0 Then
-'			SpinPengurus.Add("Belum Ada Akun Rekening!")
-'		Else
-'			SpinPengurus.Add("Pilih Nomor Rekeing Pengiriman Donasi")
-'			For i=0 To account.Size-1
-'				Dim accountData As Map
-'				accountData = account.Get(i)
-'				SpinPengurus.Add(accountData.Get("owner")&" - "&accountData.Get("account_number")&" ("&accountData.Get("bank")&")")
-'			Next
-'		End If
-'		
-'		SpinType.Add("Pilih Jenis Hewan Qurban")
-'		For i=0 To animal_type.Size-1
-'			Dim typeData As Map
-'			typeData = animal_type.Get(i)
-'			SpinType.Add(typeData.Get("animal_type")&" - "&typeData.Get("animal_price")&" (Untuk "&typeData.Get("max_person")&" Orang)")
-'		Next
-'		
-'	Else
-'		Log("Error: " & Job.ErrorMessage)
-'		ToastMessageShow("Error: " & Job.ErrorMessage, True)
-'	End If
-'	Job.Release
-'End Sub
+Sub JobDone (Job As HttpJob)
+	If Job.Success = True Then
+		
+		If Job.JobName = "Submit" Then
+			'Log("error: "&Job.GetString)
+			Dim parser As JSONParser
+			parser.Initialize(Job.GetString)
+			Dim root As Map = parser.NextObject
+			
+			invoiceSelected = root.Get("id")
+			Msgbox(root.Get("status"), "Transaction "&root.Get("id")&" successful!")
+			StartActivity(InvoiceJamaah)
+		Else
+			Dim parser As JSONParser
+			parser.Initialize(Job.GetString)
+			Dim root As Map = parser.NextObject
+						
+			NavbarTitle.Text = "Qurban "&root.Get("name")
+			NavbarTitle.TextSize = 20
+			
+			MosqueName.Text = "Description : "&root.Get("description")
+			DeadlinePayment.Text = "Deadline Payment : "&root.Get("deadline_payment")
+		End If			
+		
+	Else
+		Log("Error: " & Job.ErrorMessage)
+		ToastMessageShow("Error: " & Job.ErrorMessage, True)
+	End If
+	Job.Release
+End Sub
 
 Sub SpinPengurus_ItemClick (Position As Int, Value As Object)
 	
@@ -114,7 +120,7 @@ Sub CustomListView1_ItemClick (Index As Int, Value As Object)
 	
 End Sub
 
-Sub Button1_Click
-'	Msgbox("Qurban transaction success! Please check your history transaction for payment!", "Transaction successful!")
-	StartActivity(InvoiceJamaah)
+Sub Button1_Click	
+	CodeSemua.ExecuteUrl(Main.server&"api/qurban/store?id="&QurbanJamaah.idSelected,"group_name="&SpinPengurus.SelectedItem&"&total_qurban="&EditText1.Text&"&user="&Main.id,"Submit",Me)
+	Msgbox("Your qurban has been processing", "Process...")
 End Sub

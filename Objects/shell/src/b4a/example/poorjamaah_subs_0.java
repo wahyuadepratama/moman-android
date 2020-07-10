@@ -170,7 +170,7 @@ Debug.ShouldStop(536870912);
 poorjamaah.mostCurrent._status.runMethod(true,"setText",BA.ObjectToCharSequence(_statustxt));
  BA.debugLineNum = 96;BA.debugLine="Return p";
 Debug.ShouldStop(-2147483648);
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _p.getObject());
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _p.getObject());
  BA.debugLineNum = 97;BA.debugLine="End Sub";
 Debug.ShouldStop(1);
 return RemoteObject.createImmutable(null);

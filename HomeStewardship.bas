@@ -12,21 +12,19 @@ Version=8
 Sub Process_Globals
 	'These global variables will be declared once when the application starts.
 	'These variables can be accessed from all modules.
-	Dim id, account, worship As String
+	Dim id As String
 End Sub
 
 Sub Globals
 	'These global variables will be redeclared each time the activity is created.
 	'These variables can only be accessed from this module.
-	Private MainScroll As ScrollView
-	Private PanelHome As Panel
-	Private LabelName As Label
+	Private MainScroll As ScrollView	
+	Private StewardshipName As Label	
+	Private IdKtp As Label
 	Private LabelNumber As Label
-	Private LabelUser As Label
-	Private PanelPhoto As ImageView
-	Private LabelNoRekening1 As Label
-	Private LabelNoRekening2 As Label
+	Private PanelPhoto As ImageView	
 	Private Profile As Button
+	Private Address As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -36,7 +34,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	Profile.SetBackgroundImage(LoadBitmap(File.DirAssets,"user_green.png"))
 End Sub
 
-Sub Activity_Resume
+Sub Activity_Resume	
 	CodeSemua.ExecuteUrl(Main.server&"api/_users","id="&Main.manager.GetString("id"),"LoadData",Me)
 End Sub
 
@@ -49,6 +47,7 @@ Sub JobDone (Job As HttpJob)
 	If Job.Success = True Then
 		Dim res As String
 		res = Job.GetString 'menyimpan json dalam bentuk string
+		Log("data->>>>> "&res)
 		Dim parser As JSONParser 'mengambil data dalam bentuk json menjadi array
 		parser.Initialize(res)		
 		Select Job.JobName
@@ -57,17 +56,11 @@ Sub JobDone (Job As HttpJob)
 					Dim a As Map
 					a = parser.NextObject
 					id = Main.manager.GetString("id")
-					LabelName.Text = a.Get("username")
-					LabelNumber.Text = a.Get("phone")
-					LabelUser.Text = "Stewardship "&a.Get("worship_name")
-					worship = a.Get("worship_id")
-					
-					Dim data As List : data.Initialize
-					data = a.Get("account")
-					Dim b As Map
-					b = data.Get(0)					
-					
-					LabelNoRekening1.Text = "- "&b.Get("account_number")&" ("&b.Get("bank")&")"
+					StewardshipName.Text = a.Get("jamaah_name")&"/"&a.Get("username")
+					IdKtp.Text = a.Get("id")
+					LabelNumber.Text = "Phone: "&a.Get("phone")
+					Address.Text = a.Get("address")
+					id = a.Get("id")
 					
 					Dim path As String = ""&Main.server&"images/avatar/"&a.Get("avatar")
 					Dim m As Map
@@ -76,7 +69,7 @@ Sub JobDone (Job As HttpJob)
 					CallSubDelayed2(Starter, "Download", m)
 				Catch
 					Log(LastException)
-					Msgbox("Wrong username or password","Login Failed")
+					'Msgbox("Wrong username or password","Login Failed")
 				End Try
 		End Select
 	Else
@@ -95,10 +88,6 @@ End Sub
 
 Sub Profile_Click
 	
-End Sub
-
-Sub Donation_Click	
-	StartActivity(DonationStewardship)
 End Sub
 
 Sub Qurban_Click

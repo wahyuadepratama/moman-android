@@ -82,19 +82,17 @@ Sub JobDone (Job As HttpJob)
 				Try
 					Dim a As Map
 					a = parser.NextObject
-					id = Main.manager.GetString("id")
-					username = a.Get("username")
-					phone = a.Get("phone")
-					status = a.Get("status")					
+					id = Main.manager.GetString("id")				
 					
 					LabelName.TextColor = Colors.Black
 					LabelNumber.TextColor = Colors.Black
 					LabelUser.TextColor = Colors.Black
 					
-					LabelName.Text = username					
-					LabelNumber.Text = "Jamaah "&a.Get("worship_name")
-					LabelUser.Text = phone
-										
+					LabelName.Text = a.Get("name")&" / @"&a.Get("username")
+					LabelNumber.Text = a.Get("id")
+					LabelUser.Text = a.Get("phone")
+					Main.username = a.Get("username")
+					Main.id = a.Get("id")
 					
 					Dim path As String = ""&Main.server&"images/avatar/"&a.Get("avatar")					
 					Dim m As Map

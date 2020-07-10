@@ -342,23 +342,22 @@ public static void initializeProcessGlobals() {
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
+vis = vis | (qurbanjamaahdetail.mostCurrent != null);
 vis = vis | (homejamaah.mostCurrent != null);
 vis = vis | (qurbanjamaah.mostCurrent != null);
-vis = vis | (qurbanjamaahdetail.mostCurrent != null);
+vis = vis | (poorjamaahdetail.mostCurrent != null);
+vis = vis | (invoicejamaah.mostCurrent != null);
+vis = vis | (historyjamaah.mostCurrent != null);
+vis = vis | (homestewardship.mostCurrent != null);
 vis = vis | (orphansjamaahdetail.mostCurrent != null);
 vis = vis | (mapsjamaah.mostCurrent != null);
-vis = vis | (donationstewardship.mostCurrent != null);
 vis = vis | (donationjamaahdetail.mostCurrent != null);
-vis = vis | (homestewardship.mostCurrent != null);
 vis = vis | (qurbanstewardship.mostCurrent != null);
 vis = vis | (orphansjamaah.mostCurrent != null);
-vis = vis | (historyjamaah.mostCurrent != null);
 vis = vis | (donationjamaah.mostCurrent != null);
 vis = vis | (tpajamaah.mostCurrent != null);
 vis = vis | (tpajamaahdetail.mostCurrent != null);
-vis = vis | (poorjamaahdetail.mostCurrent != null);
 vis = vis | (poorjamaah.mostCurrent != null);
-vis = vis | (invoicejamaah.mostCurrent != null);
 vis = vis | (qurbanstewardshipdetail.mostCurrent != null);
 vis = vis | (webview.mostCurrent != null);
 return vis;}
@@ -387,6 +386,18 @@ public static void killProgram() {
 BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
  {
             Activity __a = null;
+            if (qurbanjamaahdetail.previousOne != null) {
+				__a = qurbanjamaahdetail.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(qurbanjamaahdetail.mostCurrent == null ? null : qurbanjamaahdetail.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
             if (homejamaah.previousOne != null) {
 				__a = homejamaah.previousOne.get();
 			}
@@ -411,11 +422,47 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (qurbanjamaahdetail.previousOne != null) {
-				__a = qurbanjamaahdetail.previousOne.get();
+            if (poorjamaahdetail.previousOne != null) {
+				__a = poorjamaahdetail.previousOne.get();
 			}
             else {
-                BA ba = killProgramHelper(qurbanjamaahdetail.mostCurrent == null ? null : qurbanjamaahdetail.mostCurrent.processBA);
+                BA ba = killProgramHelper(poorjamaahdetail.mostCurrent == null ? null : poorjamaahdetail.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (invoicejamaah.previousOne != null) {
+				__a = invoicejamaah.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(invoicejamaah.mostCurrent == null ? null : invoicejamaah.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (historyjamaah.previousOne != null) {
+				__a = historyjamaah.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(historyjamaah.mostCurrent == null ? null : historyjamaah.mostCurrent.processBA);
+                if (ba != null) __a = ba.activity;
+            }
+            if (__a != null)
+				__a.finish();}
+
+ {
+            Activity __a = null;
+            if (homestewardship.previousOne != null) {
+				__a = homestewardship.previousOne.get();
+			}
+            else {
+                BA ba = killProgramHelper(homestewardship.mostCurrent == null ? null : homestewardship.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -447,35 +494,11 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (donationstewardship.previousOne != null) {
-				__a = donationstewardship.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(donationstewardship.mostCurrent == null ? null : donationstewardship.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (donationjamaahdetail.previousOne != null) {
 				__a = donationjamaahdetail.previousOne.get();
 			}
             else {
                 BA ba = killProgramHelper(donationjamaahdetail.mostCurrent == null ? null : donationjamaahdetail.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (homestewardship.previousOne != null) {
-				__a = homestewardship.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(homestewardship.mostCurrent == null ? null : homestewardship.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -500,18 +523,6 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 			}
             else {
                 BA ba = killProgramHelper(orphansjamaah.mostCurrent == null ? null : orphansjamaah.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (historyjamaah.previousOne != null) {
-				__a = historyjamaah.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(historyjamaah.mostCurrent == null ? null : historyjamaah.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -555,35 +566,11 @@ BA.applicationContext.stopService(new android.content.Intent(BA.applicationConte
 
  {
             Activity __a = null;
-            if (poorjamaahdetail.previousOne != null) {
-				__a = poorjamaahdetail.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(poorjamaahdetail.mostCurrent == null ? null : poorjamaahdetail.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
             if (poorjamaah.previousOne != null) {
 				__a = poorjamaah.previousOne.get();
 			}
             else {
                 BA ba = killProgramHelper(poorjamaah.mostCurrent == null ? null : poorjamaah.mostCurrent.processBA);
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (invoicejamaah.previousOne != null) {
-				__a = invoicejamaah.previousOne.get();
-			}
-            else {
-                BA ba = killProgramHelper(invoicejamaah.mostCurrent == null ? null : invoicejamaah.mostCurrent.processBA);
                 if (ba != null) __a = ba.activity;
             }
             if (__a != null)
@@ -620,11 +607,6 @@ public static String _username = "";
 public static String _phone = "";
 public static String _status = "";
 public static String _id = "";
-public static String _worship_name = "";
-public static String _types = "";
-public static String _address = "";
-public static String _updated_at = "";
-public static String _avatar = "";
 public static String _worship_place_address = "";
 public static String _server = "";
 public static de.amberhome.objects.preferenceactivity.PreferenceManager _manager = null;
@@ -641,24 +623,23 @@ public anywheresoftware.b4a.objects.LabelWrapper _labeljam = null;
 public anywheresoftware.b4a.objects.PanelWrapper _navbar = null;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public b4a.example.starter _starter = null;
+public b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
 public b4a.example.homejamaah _homejamaah = null;
 public b4a.example.qurbanjamaah _qurbanjamaah = null;
-public b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
+public b4a.example.codesemua _codesemua = null;
+public b4a.example.poorjamaahdetail _poorjamaahdetail = null;
+public b4a.example.invoicejamaah _invoicejamaah = null;
+public b4a.example.historyjamaah _historyjamaah = null;
+public b4a.example.homestewardship _homestewardship = null;
 public b4a.example.orphansjamaahdetail _orphansjamaahdetail = null;
 public b4a.example.mapsjamaah _mapsjamaah = null;
-public b4a.example.donationstewardship _donationstewardship = null;
 public b4a.example.donationjamaahdetail _donationjamaahdetail = null;
-public b4a.example.homestewardship _homestewardship = null;
 public b4a.example.qurbanstewardship _qurbanstewardship = null;
 public b4a.example.orphansjamaah _orphansjamaah = null;
-public b4a.example.historyjamaah _historyjamaah = null;
 public b4a.example.donationjamaah _donationjamaah = null;
-public b4a.example.codesemua _codesemua = null;
 public b4a.example.tpajamaah _tpajamaah = null;
 public b4a.example.tpajamaahdetail _tpajamaahdetail = null;
-public b4a.example.poorjamaahdetail _poorjamaahdetail = null;
 public b4a.example.poorjamaah _poorjamaah = null;
-public b4a.example.invoicejamaah _invoicejamaah = null;
 public b4a.example.starter2 _starter2 = null;
 public b4a.example.qurbanstewardshipdetail _qurbanstewardshipdetail = null;
 public b4a.example.webview _webview = null;
@@ -712,41 +693,41 @@ RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "checklogin"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "checklogin", null);
 boolean _islogin = false;
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Sub CheckLogin";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="Dim islogin As Boolean";
+RDebugUtils.currentLine=524288;
+ //BA.debugLineNum = 524288;BA.debugLine="Sub CheckLogin";
+RDebugUtils.currentLine=524289;
+ //BA.debugLineNum = 524289;BA.debugLine="Dim islogin As Boolean";
 _islogin = false;
-RDebugUtils.currentLine=917506;
- //BA.debugLineNum = 917506;BA.debugLine="islogin = manager.GetBoolean(\"is_login\")";
+RDebugUtils.currentLine=524290;
+ //BA.debugLineNum = 524290;BA.debugLine="islogin = manager.GetBoolean(\"is_login\")";
 _islogin = _manager.GetBoolean("is_login");
-RDebugUtils.currentLine=917507;
- //BA.debugLineNum = 917507;BA.debugLine="If islogin Then";
+RDebugUtils.currentLine=524291;
+ //BA.debugLineNum = 524291;BA.debugLine="If islogin Then";
 if (_islogin) { 
-RDebugUtils.currentLine=917508;
- //BA.debugLineNum = 917508;BA.debugLine="If manager.GetBoolean(\"jamaah\") = True Then";
+RDebugUtils.currentLine=524292;
+ //BA.debugLineNum = 524292;BA.debugLine="If manager.GetBoolean(\"jamaah\") = True Then";
 if (_manager.GetBoolean("jamaah")==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=917509;
- //BA.debugLineNum = 917509;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=524293;
+ //BA.debugLineNum = 524293;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=917510;
- //BA.debugLineNum = 917510;BA.debugLine="StartActivity(HomeJamaah)";
+RDebugUtils.currentLine=524294;
+ //BA.debugLineNum = 524294;BA.debugLine="StartActivity(HomeJamaah)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._homejamaah.getObject()));
  }else {
-RDebugUtils.currentLine=917512;
- //BA.debugLineNum = 917512;BA.debugLine="If manager.GetBoolean(\"step\") = True Then";
+RDebugUtils.currentLine=524296;
+ //BA.debugLineNum = 524296;BA.debugLine="If manager.GetBoolean(\"step\") = True Then";
 if (_manager.GetBoolean("step")==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=917513;
- //BA.debugLineNum = 917513;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=524297;
+ //BA.debugLineNum = 524297;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=917514;
- //BA.debugLineNum = 917514;BA.debugLine="StartActivity(HomeStewardship)";
+RDebugUtils.currentLine=524298;
+ //BA.debugLineNum = 524298;BA.debugLine="StartActivity(HomeStewardship)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._homestewardship.getObject()));
  };
  };
  };
-RDebugUtils.currentLine=917518;
- //BA.debugLineNum = 917518;BA.debugLine="End Sub";
+RDebugUtils.currentLine=524302;
+ //BA.debugLineNum = 524302;BA.debugLine="End Sub";
 return "";
 }
 public static String  _setchecked(anywheresoftware.b4a.objects.PanelWrapper _v,anywheresoftware.b4a.objects.LabelWrapper _s,boolean _pressedstate) throws Exception{
@@ -755,44 +736,44 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "setchecked"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "setchecked", new Object[] {_v,_s,_pressedstate});
 anywheresoftware.b4a.objects.drawable.ColorDrawable _checked = null;
 anywheresoftware.b4a.objects.drawable.ColorDrawable _unchecked = null;
-RDebugUtils.currentLine=851968;
- //BA.debugLineNum = 851968;BA.debugLine="Sub SetChecked(v As Panel,s As Label, PressedState";
-RDebugUtils.currentLine=851969;
- //BA.debugLineNum = 851969;BA.debugLine="Dim checked, unchecked As ColorDrawable";
+RDebugUtils.currentLine=458752;
+ //BA.debugLineNum = 458752;BA.debugLine="Sub SetChecked(v As Panel,s As Label, PressedState";
+RDebugUtils.currentLine=458753;
+ //BA.debugLineNum = 458753;BA.debugLine="Dim checked, unchecked As ColorDrawable";
 _checked = new anywheresoftware.b4a.objects.drawable.ColorDrawable();
 _unchecked = new anywheresoftware.b4a.objects.drawable.ColorDrawable();
-RDebugUtils.currentLine=851970;
- //BA.debugLineNum = 851970;BA.debugLine="checked.Initialize(Colors.ARGB(255,5,138,72), 0di";
+RDebugUtils.currentLine=458754;
+ //BA.debugLineNum = 458754;BA.debugLine="checked.Initialize(Colors.ARGB(255,5,138,72), 0di";
 _checked.Initialize(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (255),(int) (5),(int) (138),(int) (72)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)));
-RDebugUtils.currentLine=851971;
- //BA.debugLineNum = 851971;BA.debugLine="unchecked.Initialize(Colors.White, 0dip)";
+RDebugUtils.currentLine=458755;
+ //BA.debugLineNum = 458755;BA.debugLine="unchecked.Initialize(Colors.White, 0dip)";
 _unchecked.Initialize(anywheresoftware.b4a.keywords.Common.Colors.White,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (0)));
-RDebugUtils.currentLine=851972;
- //BA.debugLineNum = 851972;BA.debugLine="Log(PressedState)";
+RDebugUtils.currentLine=458756;
+ //BA.debugLineNum = 458756;BA.debugLine="Log(PressedState)";
 anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(_pressedstate));
-RDebugUtils.currentLine=851973;
- //BA.debugLineNum = 851973;BA.debugLine="Select PressedState";
+RDebugUtils.currentLine=458757;
+ //BA.debugLineNum = 458757;BA.debugLine="Select PressedState";
 switch (BA.switchObjectToInt(_pressedstate,anywheresoftware.b4a.keywords.Common.True,anywheresoftware.b4a.keywords.Common.False)) {
 case 0: {
-RDebugUtils.currentLine=851975;
- //BA.debugLineNum = 851975;BA.debugLine="v.Background = checked";
+RDebugUtils.currentLine=458759;
+ //BA.debugLineNum = 458759;BA.debugLine="v.Background = checked";
 _v.setBackground((android.graphics.drawable.Drawable)(_checked.getObject()));
-RDebugUtils.currentLine=851976;
- //BA.debugLineNum = 851976;BA.debugLine="s.TextColor = Colors.White";
+RDebugUtils.currentLine=458760;
+ //BA.debugLineNum = 458760;BA.debugLine="s.TextColor = Colors.White";
 _s.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
  break; }
 case 1: {
-RDebugUtils.currentLine=851978;
- //BA.debugLineNum = 851978;BA.debugLine="v.Background = unchecked";
+RDebugUtils.currentLine=458762;
+ //BA.debugLineNum = 458762;BA.debugLine="v.Background = unchecked";
 _v.setBackground((android.graphics.drawable.Drawable)(_unchecked.getObject()));
-RDebugUtils.currentLine=851979;
- //BA.debugLineNum = 851979;BA.debugLine="s.TextColor = Colors.Black";
+RDebugUtils.currentLine=458763;
+ //BA.debugLineNum = 458763;BA.debugLine="s.TextColor = Colors.Black";
 _s.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
  break; }
 }
 ;
-RDebugUtils.currentLine=851981;
- //BA.debugLineNum = 851981;BA.debugLine="End Sub";
+RDebugUtils.currentLine=458765;
+ //BA.debugLineNum = 458765;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -824,38 +805,38 @@ String _pi = "";
 anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper _md = null;
 anywheresoftware.b4a.agraham.byteconverter.ByteConverter _bytecon = null;
 byte[] _passwordhash = null;
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Sub BtnLogin_Click";
-RDebugUtils.currentLine=786433;
- //BA.debugLineNum = 786433;BA.debugLine="Private pi As String";
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Sub BtnLogin_Click";
+RDebugUtils.currentLine=393217;
+ //BA.debugLineNum = 393217;BA.debugLine="Private pi As String";
 _pi = "";
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="pi = EditPassword.Text";
+RDebugUtils.currentLine=393218;
+ //BA.debugLineNum = 393218;BA.debugLine="pi = EditPassword.Text";
 _pi = mostCurrent._editpassword.getText();
-RDebugUtils.currentLine=786436;
- //BA.debugLineNum = 786436;BA.debugLine="Dim md As MessageDigest";
+RDebugUtils.currentLine=393220;
+ //BA.debugLineNum = 393220;BA.debugLine="Dim md As MessageDigest";
 _md = new anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper();
-RDebugUtils.currentLine=786437;
- //BA.debugLineNum = 786437;BA.debugLine="Dim ByteCon As ByteConverter";
+RDebugUtils.currentLine=393221;
+ //BA.debugLineNum = 393221;BA.debugLine="Dim ByteCon As ByteConverter";
 _bytecon = new anywheresoftware.b4a.agraham.byteconverter.ByteConverter();
-RDebugUtils.currentLine=786438;
- //BA.debugLineNum = 786438;BA.debugLine="Dim passwordhash() As Byte";
+RDebugUtils.currentLine=393222;
+ //BA.debugLineNum = 393222;BA.debugLine="Dim passwordhash() As Byte";
 _passwordhash = new byte[(int) (0)];
 ;
-RDebugUtils.currentLine=786440;
- //BA.debugLineNum = 786440;BA.debugLine="passwordhash = md.GetMessageDigest(pi.GetBytes(\"U";
+RDebugUtils.currentLine=393224;
+ //BA.debugLineNum = 393224;BA.debugLine="passwordhash = md.GetMessageDigest(pi.GetBytes(\"U";
 _passwordhash = _md.GetMessageDigest(_pi.getBytes("UTF8"),"MD5");
-RDebugUtils.currentLine=786441;
- //BA.debugLineNum = 786441;BA.debugLine="md5string = ByteCon.HexFromBytes(passwordhash)";
+RDebugUtils.currentLine=393225;
+ //BA.debugLineNum = 393225;BA.debugLine="md5string = ByteCon.HexFromBytes(passwordhash)";
 mostCurrent._md5string = _bytecon.HexFromBytes(_passwordhash);
-RDebugUtils.currentLine=786442;
- //BA.debugLineNum = 786442;BA.debugLine="md5string = md5string.ToLowerCase";
+RDebugUtils.currentLine=393226;
+ //BA.debugLineNum = 393226;BA.debugLine="md5string = md5string.ToLowerCase";
 mostCurrent._md5string = mostCurrent._md5string.toLowerCase();
-RDebugUtils.currentLine=786443;
- //BA.debugLineNum = 786443;BA.debugLine="CodeSemua.ExecuteUrl(server&\"api/login\",\"username";
+RDebugUtils.currentLine=393227;
+ //BA.debugLineNum = 393227;BA.debugLine="CodeSemua.ExecuteUrl(server&\"api/login\",\"username";
 mostCurrent._codesemua._executeurl(mostCurrent.activityBA,_server+"api/login","username="+mostCurrent._editusername.getText()+"&password="+mostCurrent._md5string,"Login",main.getObject());
-RDebugUtils.currentLine=786445;
- //BA.debugLineNum = 786445;BA.debugLine="End Sub";
+RDebugUtils.currentLine=393229;
+ //BA.debugLineNum = 393229;BA.debugLine="End Sub";
 return "";
 }
 public static String  _jobdone(anywheresoftware.b4a.samples.httputils2.httpjob _job) throws Exception{
@@ -865,185 +846,179 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "jobdone"))
 String _res = "";
 anywheresoftware.b4a.objects.collections.JSONParser _parser = null;
 anywheresoftware.b4a.objects.collections.Map _a = null;
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Sub JobDone (Job As HttpJob)";
-RDebugUtils.currentLine=720897;
- //BA.debugLineNum = 720897;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \"";
+RDebugUtils.currentLine=327680;
+ //BA.debugLineNum = 327680;BA.debugLine="Sub JobDone (Job As HttpJob)";
+RDebugUtils.currentLine=327681;
+ //BA.debugLineNum = 327681;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \"";
 anywheresoftware.b4a.keywords.Common.Log("JobName = "+_job._jobname+", Success = "+BA.ObjectToString(_job._success));
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="If Job.Success = True Then";
+RDebugUtils.currentLine=327682;
+ //BA.debugLineNum = 327682;BA.debugLine="If Job.Success = True Then";
 if (_job._success==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="Dim res As String";
+RDebugUtils.currentLine=327683;
+ //BA.debugLineNum = 327683;BA.debugLine="Dim res As String";
 _res = "";
-RDebugUtils.currentLine=720900;
- //BA.debugLineNum = 720900;BA.debugLine="res = Job.GetString 'menyimpan json dalam bentuk";
+RDebugUtils.currentLine=327684;
+ //BA.debugLineNum = 327684;BA.debugLine="res = Job.GetString 'menyimpan json dalam bentuk";
 _res = _job._getstring();
-RDebugUtils.currentLine=720901;
- //BA.debugLineNum = 720901;BA.debugLine="Dim parser As JSONParser 'mengambil data dalam b";
+RDebugUtils.currentLine=327685;
+ //BA.debugLineNum = 327685;BA.debugLine="Dim parser As JSONParser 'mengambil data dalam b";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
-RDebugUtils.currentLine=720902;
- //BA.debugLineNum = 720902;BA.debugLine="parser.Initialize(res)";
+RDebugUtils.currentLine=327686;
+ //BA.debugLineNum = 327686;BA.debugLine="parser.Initialize(res)";
 _parser.Initialize(_res);
-RDebugUtils.currentLine=720903;
- //BA.debugLineNum = 720903;BA.debugLine="Log(\"Response from server :\"& res)";
+RDebugUtils.currentLine=327687;
+ //BA.debugLineNum = 327687;BA.debugLine="Log(\"Response from server :\"& res)";
 anywheresoftware.b4a.keywords.Common.Log("Response from server :"+_res);
-RDebugUtils.currentLine=720904;
- //BA.debugLineNum = 720904;BA.debugLine="Select Job.JobName";
+RDebugUtils.currentLine=327688;
+ //BA.debugLineNum = 327688;BA.debugLine="Select Job.JobName";
 switch (BA.switchObjectToInt(_job._jobname,"Login")) {
 case 0: {
-RDebugUtils.currentLine=720906;
- //BA.debugLineNum = 720906;BA.debugLine="Try";
-try {RDebugUtils.currentLine=720907;
- //BA.debugLineNum = 720907;BA.debugLine="Dim a As Map";
+RDebugUtils.currentLine=327690;
+ //BA.debugLineNum = 327690;BA.debugLine="Try";
+try {RDebugUtils.currentLine=327691;
+ //BA.debugLineNum = 327691;BA.debugLine="Dim a As Map";
 _a = new anywheresoftware.b4a.objects.collections.Map();
-RDebugUtils.currentLine=720908;
- //BA.debugLineNum = 720908;BA.debugLine="a = parser.NextObject";
+RDebugUtils.currentLine=327692;
+ //BA.debugLineNum = 327692;BA.debugLine="a = parser.NextObject";
 _a = _parser.NextObject();
-RDebugUtils.currentLine=720909;
- //BA.debugLineNum = 720909;BA.debugLine="username = a.Get(\"username\")";
+RDebugUtils.currentLine=327693;
+ //BA.debugLineNum = 327693;BA.debugLine="username = a.Get(\"username\")";
 _username = BA.ObjectToString(_a.Get((Object)("username")));
-RDebugUtils.currentLine=720910;
- //BA.debugLineNum = 720910;BA.debugLine="phone = a.Get(\"phone\")";
+RDebugUtils.currentLine=327694;
+ //BA.debugLineNum = 327694;BA.debugLine="phone = a.Get(\"phone\")";
 _phone = BA.ObjectToString(_a.Get((Object)("phone")));
-RDebugUtils.currentLine=720911;
- //BA.debugLineNum = 720911;BA.debugLine="status = a.Get(\"status\")";
+RDebugUtils.currentLine=327695;
+ //BA.debugLineNum = 327695;BA.debugLine="status = a.Get(\"status\")";
 _status = BA.ObjectToString(_a.Get((Object)("status")));
-RDebugUtils.currentLine=720912;
- //BA.debugLineNum = 720912;BA.debugLine="id = a.Get (\"jamaah_id\")";
-_id = BA.ObjectToString(_a.Get((Object)("jamaah_id")));
-RDebugUtils.currentLine=720915;
- //BA.debugLineNum = 720915;BA.debugLine="address= a.Get(\"address\")";
-_address = BA.ObjectToString(_a.Get((Object)("address")));
-RDebugUtils.currentLine=720917;
- //BA.debugLineNum = 720917;BA.debugLine="avatar= a.Get(\"avatar\")";
-_avatar = BA.ObjectToString(_a.Get((Object)("avatar")));
-RDebugUtils.currentLine=720921;
- //BA.debugLineNum = 720921;BA.debugLine="If username == \"null\" Or phone == \"null\" Then";
+RDebugUtils.currentLine=327696;
+ //BA.debugLineNum = 327696;BA.debugLine="id = a.Get (\"id\")";
+_id = BA.ObjectToString(_a.Get((Object)("id")));
+RDebugUtils.currentLine=327699;
+ //BA.debugLineNum = 327699;BA.debugLine="If username == \"null\" Or phone == \"null\" Then";
 if ((_username).equals("null") || (_phone).equals("null")) { 
-RDebugUtils.currentLine=720922;
- //BA.debugLineNum = 720922;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login F";
+RDebugUtils.currentLine=327700;
+ //BA.debugLineNum = 327700;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login F";
 anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence("Wrong username or password"),BA.ObjectToCharSequence("Login Failed"),mostCurrent.activityBA);
  }else {
-RDebugUtils.currentLine=720924;
- //BA.debugLineNum = 720924;BA.debugLine="If (manager.GetBoolean(\"jamaah\") = True) The";
+RDebugUtils.currentLine=327702;
+ //BA.debugLineNum = 327702;BA.debugLine="If (manager.GetBoolean(\"jamaah\") = True) The";
 if ((_manager.GetBoolean("jamaah")==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=720925;
- //BA.debugLineNum = 720925;BA.debugLine="manager.SetString(\"username\",username)";
+RDebugUtils.currentLine=327703;
+ //BA.debugLineNum = 327703;BA.debugLine="manager.SetString(\"username\",username)";
 _manager.SetString("username",_username);
-RDebugUtils.currentLine=720926;
- //BA.debugLineNum = 720926;BA.debugLine="manager.SetString(\"id\",id)";
+RDebugUtils.currentLine=327704;
+ //BA.debugLineNum = 327704;BA.debugLine="manager.SetString(\"id\",id)";
 _manager.SetString("id",_id);
-RDebugUtils.currentLine=720927;
- //BA.debugLineNum = 720927;BA.debugLine="Msgbox(\"login sebagai jamaah\",\"Info\")";
+RDebugUtils.currentLine=327705;
+ //BA.debugLineNum = 327705;BA.debugLine="Msgbox(\"login sebagai jamaah\",\"Info\")";
 anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence("login sebagai jamaah"),BA.ObjectToCharSequence("Info"),mostCurrent.activityBA);
-RDebugUtils.currentLine=720928;
- //BA.debugLineNum = 720928;BA.debugLine="manager.SetBoolean(\"is_login\",True)";
+RDebugUtils.currentLine=327706;
+ //BA.debugLineNum = 327706;BA.debugLine="manager.SetBoolean(\"is_login\",True)";
 _manager.SetBoolean("is_login",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=720929;
- //BA.debugLineNum = 720929;BA.debugLine="Log(\"start home jamaah-----------------\")";
+RDebugUtils.currentLine=327707;
+ //BA.debugLineNum = 327707;BA.debugLine="Log(\"start home jamaah-----------------\")";
 anywheresoftware.b4a.keywords.Common.Log("start home jamaah-----------------");
-RDebugUtils.currentLine=720930;
- //BA.debugLineNum = 720930;BA.debugLine="StartActivity(HomeJamaah)";
+RDebugUtils.currentLine=327708;
+ //BA.debugLineNum = 327708;BA.debugLine="StartActivity(HomeJamaah)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._homejamaah.getObject()));
  }else {
-RDebugUtils.currentLine=720932;
- //BA.debugLineNum = 720932;BA.debugLine="If (status = \"stewardship\") And (manager.Ge";
+RDebugUtils.currentLine=327710;
+ //BA.debugLineNum = 327710;BA.debugLine="If (status = \"stewardship\") And (manager.Ge";
 if (((_status).equals("stewardship")) && (_manager.GetBoolean("step")==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=720933;
- //BA.debugLineNum = 720933;BA.debugLine="Msgbox(\"login sebagai stewardship\",\"Info\")";
+RDebugUtils.currentLine=327711;
+ //BA.debugLineNum = 327711;BA.debugLine="Msgbox(\"login sebagai stewardship\",\"Info\")";
 anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence("login sebagai stewardship"),BA.ObjectToCharSequence("Info"),mostCurrent.activityBA);
-RDebugUtils.currentLine=720934;
- //BA.debugLineNum = 720934;BA.debugLine="manager.SetString(\"username\",username)";
+RDebugUtils.currentLine=327712;
+ //BA.debugLineNum = 327712;BA.debugLine="manager.SetString(\"username\",username)";
 _manager.SetString("username",_username);
-RDebugUtils.currentLine=720935;
- //BA.debugLineNum = 720935;BA.debugLine="manager.SetString(\"id\",id)";
+RDebugUtils.currentLine=327713;
+ //BA.debugLineNum = 327713;BA.debugLine="manager.SetString(\"id\",id)";
 _manager.SetString("id",_id);
-RDebugUtils.currentLine=720936;
- //BA.debugLineNum = 720936;BA.debugLine="manager.SetBoolean(\"is_login\",True)";
+RDebugUtils.currentLine=327714;
+ //BA.debugLineNum = 327714;BA.debugLine="manager.SetBoolean(\"is_login\",True)";
 _manager.SetBoolean("is_login",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=720937;
- //BA.debugLineNum = 720937;BA.debugLine="Log(\"start home stewardship.............\"";
+RDebugUtils.currentLine=327715;
+ //BA.debugLineNum = 327715;BA.debugLine="Log(\"start home stewardship.............\"";
 anywheresoftware.b4a.keywords.Common.Log("start home stewardship.............");
-RDebugUtils.currentLine=720938;
- //BA.debugLineNum = 720938;BA.debugLine="StartActivity(HomeStewardship)";
+RDebugUtils.currentLine=327716;
+ //BA.debugLineNum = 327716;BA.debugLine="StartActivity(HomeStewardship)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._homestewardship.getObject()));
  }else {
-RDebugUtils.currentLine=720940;
- //BA.debugLineNum = 720940;BA.debugLine="Msgbox(\"Pastikan Login Dengan Benar\",\"Warn";
+RDebugUtils.currentLine=327718;
+ //BA.debugLineNum = 327718;BA.debugLine="Msgbox(\"Pastikan Login Dengan Benar\",\"Warn";
 anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence("Pastikan Login Dengan Benar"),BA.ObjectToCharSequence("Warning"),mostCurrent.activityBA);
  };
  };
  };
  } 
-       catch (Exception e43) {
-			processBA.setLastException(e43);RDebugUtils.currentLine=720946;
- //BA.debugLineNum = 720946;BA.debugLine="Log(LastException)";
+       catch (Exception e41) {
+			processBA.setLastException(e41);RDebugUtils.currentLine=327724;
+ //BA.debugLineNum = 327724;BA.debugLine="Log(LastException)";
 anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(anywheresoftware.b4a.keywords.Common.LastException(mostCurrent.activityBA)));
-RDebugUtils.currentLine=720947;
- //BA.debugLineNum = 720947;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login Fa";
+RDebugUtils.currentLine=327725;
+ //BA.debugLineNum = 327725;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login Fa";
 anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence("Wrong username or password"),BA.ObjectToCharSequence("Login Failed"),mostCurrent.activityBA);
  };
  break; }
 }
 ;
  }else {
-RDebugUtils.currentLine=720951;
- //BA.debugLineNum = 720951;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
+RDebugUtils.currentLine=327729;
+ //BA.debugLineNum = 327729;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
 anywheresoftware.b4a.keywords.Common.Log("Error: "+_job._errormessage);
-RDebugUtils.currentLine=720952;
- //BA.debugLineNum = 720952;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+RDebugUtils.currentLine=327730;
+ //BA.debugLineNum = 327730;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("Error: "+_job._errormessage),anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=720954;
- //BA.debugLineNum = 720954;BA.debugLine="Job.Release";
+RDebugUtils.currentLine=327732;
+ //BA.debugLineNum = 327732;BA.debugLine="Job.Release";
 _job._release();
-RDebugUtils.currentLine=720955;
- //BA.debugLineNum = 720955;BA.debugLine="End Sub";
+RDebugUtils.currentLine=327733;
+ //BA.debugLineNum = 327733;BA.debugLine="End Sub";
 return "";
 }
 public static String  _labeljam_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "labeljam_click"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "labeljam_click", null);
-RDebugUtils.currentLine=1048576;
- //BA.debugLineNum = 1048576;BA.debugLine="Sub labeljam_Click";
-RDebugUtils.currentLine=1048577;
- //BA.debugLineNum = 1048577;BA.debugLine="manager.SetBoolean(\"jamaah\",True)";
+RDebugUtils.currentLine=655360;
+ //BA.debugLineNum = 655360;BA.debugLine="Sub labeljam_Click";
+RDebugUtils.currentLine=655361;
+ //BA.debugLineNum = 655361;BA.debugLine="manager.SetBoolean(\"jamaah\",True)";
 _manager.SetBoolean("jamaah",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1048578;
- //BA.debugLineNum = 1048578;BA.debugLine="manager.SetBoolean(\"step\",False)";
+RDebugUtils.currentLine=655362;
+ //BA.debugLineNum = 655362;BA.debugLine="manager.SetBoolean(\"step\",False)";
 _manager.SetBoolean("step",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=1048579;
- //BA.debugLineNum = 1048579;BA.debugLine="SetChecked(pstep,Labelstep,manager.GetBoolean(\"st";
+RDebugUtils.currentLine=655363;
+ //BA.debugLineNum = 655363;BA.debugLine="SetChecked(pstep,Labelstep,manager.GetBoolean(\"st";
 _setchecked(mostCurrent._pstep,mostCurrent._labelstep,_manager.GetBoolean("step"));
-RDebugUtils.currentLine=1048580;
- //BA.debugLineNum = 1048580;BA.debugLine="SetChecked(pjam,labeljam,manager.GetBoolean(\"jama";
+RDebugUtils.currentLine=655364;
+ //BA.debugLineNum = 655364;BA.debugLine="SetChecked(pjam,labeljam,manager.GetBoolean(\"jama";
 _setchecked(mostCurrent._pjam,mostCurrent._labeljam,_manager.GetBoolean("jamaah"));
-RDebugUtils.currentLine=1048581;
- //BA.debugLineNum = 1048581;BA.debugLine="End Sub";
+RDebugUtils.currentLine=655365;
+ //BA.debugLineNum = 655365;BA.debugLine="End Sub";
 return "";
 }
 public static String  _labelstep_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "labelstep_click"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "labelstep_click", null);
-RDebugUtils.currentLine=983040;
- //BA.debugLineNum = 983040;BA.debugLine="Sub Labelstep_Click";
-RDebugUtils.currentLine=983041;
- //BA.debugLineNum = 983041;BA.debugLine="manager.SetBoolean(\"step\",True)";
+RDebugUtils.currentLine=589824;
+ //BA.debugLineNum = 589824;BA.debugLine="Sub Labelstep_Click";
+RDebugUtils.currentLine=589825;
+ //BA.debugLineNum = 589825;BA.debugLine="manager.SetBoolean(\"step\",True)";
 _manager.SetBoolean("step",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=983042;
- //BA.debugLineNum = 983042;BA.debugLine="manager.SetBoolean(\"jamaah\",False)";
+RDebugUtils.currentLine=589826;
+ //BA.debugLineNum = 589826;BA.debugLine="manager.SetBoolean(\"jamaah\",False)";
 _manager.SetBoolean("jamaah",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=983043;
- //BA.debugLineNum = 983043;BA.debugLine="SetChecked(pstep,Labelstep,manager.GetBoolean(\"st";
+RDebugUtils.currentLine=589827;
+ //BA.debugLineNum = 589827;BA.debugLine="SetChecked(pstep,Labelstep,manager.GetBoolean(\"st";
 _setchecked(mostCurrent._pstep,mostCurrent._labelstep,_manager.GetBoolean("step"));
-RDebugUtils.currentLine=983044;
- //BA.debugLineNum = 983044;BA.debugLine="SetChecked(pjam,labeljam,manager.GetBoolean(\"jama";
+RDebugUtils.currentLine=589828;
+ //BA.debugLineNum = 589828;BA.debugLine="SetChecked(pjam,labeljam,manager.GetBoolean(\"jama";
 _setchecked(mostCurrent._pjam,mostCurrent._labeljam,_manager.GetBoolean("jamaah"));
-RDebugUtils.currentLine=983045;
- //BA.debugLineNum = 983045;BA.debugLine="End Sub";
+RDebugUtils.currentLine=589829;
+ //BA.debugLineNum = 589829;BA.debugLine="End Sub";
 return "";
 }
 }

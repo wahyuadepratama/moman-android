@@ -5,11 +5,11 @@ main,activity_create,1,0,45,65
 ,manager,,mainscroll,,navbar,,btnlogin,,editpassword,,editusername,,labeljam,,labelstep,,panellogin,,pjam,,pstep
 ,mainscroll,,navbar,,btnlogin,,editpassword,,editusername,,labeljam,,labelstep,,panellogin,,pjam,,pstep
 ,checklogin,,setchecked
-main,checklogin,0,0,168,182
+main,checklogin,0,0,162,176
 ,manager
 
 
-main,setchecked,0,0,153,166
+main,setchecked,0,0,147,160
 
 
 
@@ -21,7 +21,7 @@ main,activity_resume,0,0,67,69
 ,manager
 
 
-main,btnlogin_click,0,0,137,150
+main,btnlogin_click,0,0,131,144
 ,editpassword,,md5string,,server,,editusername
 ,md5string
 codesemua,executeurl
@@ -29,15 +29,15 @@ main,globals,0,1,26,43
 
 
 
-main,jobdone,1,0,76,135
-,username,,phone,,status,,id,,address,,avatar,,manager
-,username,,phone,,status,,id,,address,,avatar
+main,jobdone,1,0,76,129
+,username,,phone,,status,,id,,manager
+,username,,phone,,status,,id
 
-main,labeljam_click,0,0,191,196
+main,labeljam_click,0,0,185,190
 ,manager,,pstep,,labelstep,,pjam,,labeljam
 
 ,setchecked
-main,labelstep_click,0,0,184,189
+main,labelstep_click,0,0,178,183
 ,manager,,pstep,,labelstep,,pjam,,labeljam
 
 ,setchecked
@@ -53,11 +53,11 @@ codesemua,executeurlget,0,0,27,31
 
 
 
-codesemua,setbackgroundtintlist,0,0,9,19
-
-
-
 codesemua,process_globals,0,1,3,7
+
+
+
+codesemua,setbackgroundtintlist,0,0,9,19
 
 
 
@@ -133,6 +133,42 @@ starter,startgps,1,0,32,37
 ,gpsstarted,,gps1
 ,gpsstarted
 
+qurbanjamaahdetail,activity_create,1,0,38,66
+,mainscroll,,navbar,,navbartitle,,button1,,deadlinepayment,,edittext1,,mosquename,,panelqurban,,spinpengurus,,pengurus,,types
+,mainscroll,,navbar,,navbartitle,,button1,,deadlinepayment,,edittext1,,mosquename,,panelqurban,,spinpengurus
+
+qurbanjamaahdetail,activity_pause,0,0,73,75
+
+
+
+qurbanjamaahdetail,activity_resume,0,0,68,71
+main,server,qurbanjamaah,idselected,main,id
+
+codesemua,executeurlget
+qurbanjamaahdetail,button1_click,1,0,117,120
+main,server,qurbanjamaah,idselected,,spinpengurus,,edittext1,main,id
+
+codesemua,executeurl
+qurbanjamaahdetail,customlistview1_itemclick,0,0,113,115
+
+
+
+qurbanjamaahdetail,globals,0,1,12,36
+,account,,animal_type
+
+
+qurbanjamaahdetail,jobdone,1,0,77,106
+,invoiceselected,,navbartitle,,mosquename,,deadlinepayment
+,invoiceselected
+
+qurbanjamaahdetail,process_globals,0,1,6,10
+
+
+
+qurbanjamaahdetail,spinpengurus_itemclick,0,0,108,110
+
+
+
 homejamaah,activity_create,1,0,40,56
 ,backbtn,,mainscroll,,navbar,,navbartitle,,historybtn,,historylabel,,labelname,,labelnumber,,labeluser,,logoutbtn,,logoutlabel,,mapbtn,,panelbanner,,panelhome,,panelmenu,,panelphoto,,qurbanbtn
 ,backbtn,,mainscroll,,navbar,,navbartitle,,historybtn,,historylabel,,labelname,,labelnumber,,labeluser,,logoutbtn,,logoutlabel,,mapbtn,,panelbanner,,panelhome,,panelmenu,,panelphoto,,qurbanbtn
@@ -145,7 +181,7 @@ homejamaah,activity_resume,0,0,58,60
 main,server,main,manager
 
 codesemua,executeurl
-homejamaah,constructionbtn_click,0,0,117,119
+homejamaah,constructionbtn_click,0,0,115,117
 
 
 
@@ -153,27 +189,27 @@ homejamaah,globals,0,1,12,38
 
 
 
-homejamaah,historybtn_click,0,0,141,143
+homejamaah,historybtn_click,0,0,139,141
 
 
 
-homejamaah,jobdone,1,0,66,109
-,id,main,manager,,username,,phone,,status,,labelname,,labelnumber,,labeluser,main,server,,panelphoto
-,id,,username,,phone,,status
+homejamaah,jobdone,1,0,66,107
+,id,main,manager,,labelname,,labelnumber,,labeluser,main,username,main,id,main,server,,panelphoto
+,id,main,username,main,id
 
-homejamaah,logoutbtn_click,0,0,111,115
+homejamaah,logoutbtn_click,0,0,109,113
 main,manager
 
 
-homejamaah,mapbtn_click,0,0,125,127
+homejamaah,mapbtn_click,0,0,123,125
 
 
 
-homejamaah,orphanbtn_click,0,0,129,131
+homejamaah,orphanbtn_click,0,0,127,129
 
 
 
-homejamaah,poorbtn_click,0,0,137,139
+homejamaah,poorbtn_click,0,0,135,137
 
 
 
@@ -181,11 +217,11 @@ homejamaah,process_globals,0,1,6,10
 
 
 
-homejamaah,qurbanbtn_click,0,0,121,123
+homejamaah,qurbanbtn_click,0,0,119,121
 
 
 
-homejamaah,tpabtn_click,0,0,133,135
+homejamaah,tpabtn_click,0,0,131,133
 
 
 
@@ -225,35 +261,151 @@ qurbanjamaah,process_globals,0,1,6,11
 
 
 
-qurbanjamaahdetail,activity_create,1,0,35,54
-,mainscroll,,navbar,,navbartitle,,button1,,panelqurban,,spinpengurus,,pengurus,,types
-,mainscroll,,navbar,,navbartitle,,button1,,panelqurban,,spinpengurus
+poorjamaahdetail,activity_create,1,0,30,39
+,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,edittotal,,panelqurban,,spinpengurus,,pengurus
+,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,edittotal,,panelqurban,,spinpengurus
 
-qurbanjamaahdetail,activity_pause,0,0,60,62
+poorjamaahdetail,activity_pause,0,0,45,47
 
 
 
-qurbanjamaahdetail,activity_resume,0,0,56,58
-main,server,qurbanjamaah,idselected
+poorjamaahdetail,activity_resume,0,0,41,43
+main,server,poorjamaah,id_clicked
 
 codesemua,executeurlget
-qurbanjamaahdetail,button1_click,0,0,111,114
+poorjamaahdetail,button1_click,0,0,96,98
+main,server,poorjamaah,id_clicked,homejamaah,id,,edittotal,,accountid,,publicid
+
+codesemua,executeurl
+poorjamaahdetail,checkguna_checkedchange,1,0,100,110
+,checkguna,,checkhamba,,publicid
+,publicid
+
+poorjamaahdetail,checkhamba_checkedchange,1,0,112,122
+,checkhamba,,checkguna,,publicid
+,publicid
+
+poorjamaahdetail,globals,0,1,12,28
+,account
+
+
+poorjamaahdetail,jobdone,1,0,49,93
+,notransaction,,navbartitle,,account,,spinpengurus
+,notransaction,,account
+
+poorjamaahdetail,process_globals,0,1,6,10
 
 
 
-qurbanjamaahdetail,customlistview1_itemclick,0,0,107,109
+poorjamaahdetail,spinpengurus_itemclick,0,0,124,132
+,account,,spinpengurus,,accountid
+,accountid
+
+invoicejamaah,activity_create,1,0,38,46
+,mainscroll,,navbartitle,,panelqurban
+,mainscroll,,navbartitle
+
+invoicejamaah,activity_pause,0,0,60,62
 
 
 
-qurbanjamaahdetail,globals,0,1,12,33
-,account,,animal_type
+invoicejamaah,activity_resume,0,0,48,58
+historyjamaah,invoiceselected,,id,qurbanjamaahdetail,invoiceselected,main,server
+,id
+codesemua,executeurlget
+invoicejamaah,btnconfirm_click,0,0,97,99
 
 
-qurbanjamaahdetail,process_globals,0,1,6,10
+
+invoicejamaah,globals,0,1,12,36
 
 
 
-qurbanjamaahdetail,spinpengurus_itemclick,0,0,102,104
+invoicejamaah,jobdone,0,0,64,95
+,label2,,labeldate,,label4,,label6,,label10,,valueunpaid,,valuepaid,,valuestatus,,valuepaymentinfo,,valueconfirmation
+
+
+invoicejamaah,process_globals,0,1,6,10
+
+
+
+historyjamaah,activity_create,1,1,30,41
+,mainscroll,,navbartitle,,clv,,panelqurban
+,mainscroll,,navbartitle,,clv,,panelqurban
+
+historyjamaah,activity_keypress,0,0,127,133
+
+
+
+historyjamaah,activity_pause,0,0,49,51
+
+
+
+historyjamaah,activity_resume,0,0,43,47
+,clv,main,server,main,id
+
+codesemua,executeurlget
+historyjamaah,clv_itemclick,0,0,111,113
+
+
+
+historyjamaah,createitem,1,0,53,65
+,xui,,datetrans,,id,,panellistitem,,statustransc,,transname
+,datetrans,,id,,panellistitem,,statustransc,,transname
+
+historyjamaah,globals,0,1,13,28
+
+
+
+historyjamaah,jobdone,1,0,67,109
+,clv,,panellistitem,,panelqurban,,mainscroll,,xui,,datetrans,,id,,statustransc,,transname
+,datetrans,,id,,panellistitem,,statustransc,,transname
+,createitem
+historyjamaah,panellistitem_click,0,0,115,125
+,clv,,invoiceselected
+,invoiceselected
+
+historyjamaah,process_globals,0,1,6,11
+
+
+
+homestewardship,activity_create,1,0,24,29
+,mainscroll,,profile,,address,,idktp,,labelnumber,,panelphoto,,stewardshipname
+,mainscroll,,profile,,address,,idktp,,labelnumber,,panelphoto,,stewardshipname
+
+homestewardship,activity_pause,0,0,35,37
+
+
+
+homestewardship,activity_resume,0,0,31,33
+main,server,main,manager
+
+codesemua,executeurl
+homestewardship,globals,0,1,12,22
+
+
+
+homestewardship,jobdone,0,0,39,74
+,id,main,manager,,stewardshipname,,idktp,,labelnumber,,address,main,server,,panelphoto
+,id
+
+homestewardship,logout_click,0,0,77,81
+main,manager
+
+
+homestewardship,process_globals,0,1,6,10
+
+
+
+homestewardship,profile_click,0,0,83,85
+
+
+
+homestewardship,qurban_click,0,0,87,89
+
+
+
+homestewardship,web_click,0,0,91,93
 
 
 
@@ -329,58 +481,6 @@ mapsjamaah,process_globals,0,1,6,10
 
 
 
-donationstewardship,activity_create,1,1,33,44
-,donation,,mainscroll,,navbartitle,,clv,,panelqurban
-,donation,,mainscroll,,navbartitle,,clv,,panelqurban
-
-donationstewardship,activity_pause,0,0,51,53
-
-
-
-donationstewardship,activity_resume,0,0,46,49
-,clv,main,server,homestewardship,worship
-
-codesemua,executeurlget
-donationstewardship,clv_itemclick,1,0,132,146
-,clv,,idselected,main,server
-,idselected
-codesemua,executeurlget
-donationstewardship,createitem,1,0,55,86
-,xui,,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
-,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
-
-donationstewardship,donation_click,0,0,168,170
-
-
-
-donationstewardship,globals,0,1,13,31
-
-
-
-donationstewardship,jobdone,1,0,88,130
-,clv,,panellistitem,,panelqurban,,mainscroll,,xui,,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,projectname,,worshipplace
-,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
-,createitem
-donationstewardship,panellistitem_click,1,0,148,162
-,clv,,idselected,main,server
-,idselected
-codesemua,executeurlget
-donationstewardship,process_globals,0,1,6,11
-
-
-
-donationstewardship,profile_click,0,0,164,166
-
-
-
-donationstewardship,qurban_click,0,0,172,174
-
-
-
-donationstewardship,web_click,0,0,176,178
-
-
-
 donationjamaahdetail,activity_create,1,0,38,48
 ,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,description,,edittotal,,fundcollected,,fundneeded,,horizontalscrollview1,,panelqurban,,progress,,spinpengurus,,pengurus
 ,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,description,,edittotal,,fundcollected,,fundneeded,,horizontalscrollview1,,panelqurban,,progress,,spinpengurus
@@ -421,83 +521,35 @@ donationjamaahdetail,spinpengurus_itemclick,0,0,162,170
 ,account,,spinpengurus,,accountid
 ,accountid
 
-homestewardship,activity_create,1,0,26,31
-,mainscroll,,profile,,labelname,,labelnorekening1,,labelnorekening2,,labelnumber,,labeluser,,panelhome,,panelphoto
-,mainscroll,,profile,,labelname,,labelnorekening1,,labelnorekening2,,labelnumber,,labeluser,,panelhome,,panelphoto
+qurbanstewardship,activity_create,1,1,34,45
+,mainscroll,,navbartitle,,panelqurban,,qurban,,clv
+,mainscroll,,navbartitle,,panelqurban,,qurban,,clv
 
-homestewardship,activity_pause,0,0,37,39
-
-
-
-homestewardship,activity_resume,0,0,33,35
-main,server,main,manager
-
-codesemua,executeurl
-homestewardship,donation_click,0,0,94,96
+qurbanstewardship,activity_pause,0,0,52,54
 
 
 
-homestewardship,globals,0,1,12,24
-
-
-
-homestewardship,jobdone,1,0,41,81
-,id,main,manager,,labelname,,labelnumber,,labeluser,,worship,,labelnorekening1,main,server,,panelphoto
-,id,,worship
-
-homestewardship,logout_click,0,0,84,88
-main,manager
-
-
-homestewardship,process_globals,0,1,6,10
-
-
-
-homestewardship,profile_click,0,0,90,92
-
-
-
-homestewardship,qurban_click,0,0,98,100
-
-
-
-homestewardship,web_click,0,0,102,104
-
-
-
-qurbanstewardship,activity_create,1,1,33,44
-,mainscroll,,navbartitle,,qurban,,clv,,panelqurban
-,mainscroll,,navbartitle,,qurban,,clv,,panelqurban
-
-qurbanstewardship,activity_pause,0,0,51,53
-
-
-
-qurbanstewardship,activity_resume,0,0,46,49
-,clv,main,server,homestewardship,worship
+qurbanstewardship,activity_resume,0,0,47,50
+,clv,main,server,homestewardship,id
 
 codesemua,executeurlget
-qurbanstewardship,clv_itemclick,0,0,134,145
+qurbanstewardship,clv_itemclick,0,0,115,125
 ,clv,,idselected
 ,idselected
 
-qurbanstewardship,createitem,1,0,55,88
-,xui,,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
-,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
+qurbanstewardship,createitem,1,0,56,69
+,xui,,btndonationhere,,date,,idpro,,jamaah,,panellistitem,,status,,transaction
+,btndonationhere,,date,,idpro,,jamaah,,panellistitem,,status,,transaction
 
-qurbanstewardship,donation_click,0,0,164,166
-
-
-
-qurbanstewardship,globals,0,1,13,31
+qurbanstewardship,globals,0,1,13,32
 
 
 
-qurbanstewardship,jobdone,1,0,90,132
-,clv,,panellistitem,,panelqurban,,mainscroll,,xui,,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,projectname,,worshipplace
-,btndonationhere,,fundcollect,,fundneed,,idpro,,idworship,,ldatetime,,panellistitem,,projectname,,worshipplace
+qurbanstewardship,jobdone,1,0,71,113
+,clv,,panellistitem,,panelqurban,,mainscroll,,xui,,btndonationhere,,date,,idpro,,jamaah,,status,,transaction
+,btndonationhere,,date,,idpro,,jamaah,,panellistitem,,status,,transaction
 ,createitem
-qurbanstewardship,panellistitem_click,0,0,147,158
+qurbanstewardship,panellistitem_click,0,0,127,137
 ,clv,,idselected
 ,idselected
 
@@ -505,15 +557,15 @@ qurbanstewardship,process_globals,0,1,6,11
 
 
 
-qurbanstewardship,profile_click,0,0,160,162
+qurbanstewardship,profile_click,0,0,139,141
 
 
 
-qurbanstewardship,qurban_click,0,0,168,170
+qurbanstewardship,qurban_click,0,0,143,145
 
 
 
-qurbanstewardship,web_click,0,0,172,174
+qurbanstewardship,web_click,0,0,147,149
 
 
 
@@ -550,46 +602,6 @@ orphansjamaah,jobdone,1,0,48,84
 ,address,,btndonationhere,,idpro,,mosquename,,panellistitem,,status
 ,createitem
 orphansjamaah,process_globals,0,1,6,11
-
-
-
-historyjamaah,activity_create,1,1,30,41
-,mainscroll,,navbartitle,,clv,,panelqurban
-,mainscroll,,navbartitle,,clv,,panelqurban
-
-historyjamaah,activity_keypress,0,0,133,139
-
-
-
-historyjamaah,activity_pause,0,0,48,50
-
-
-
-historyjamaah,activity_resume,0,0,43,46
-,clv,main,server,homejamaah,id
-
-codesemua,executeurlget
-historyjamaah,clv_itemclick,0,0,116,118
-
-
-
-historyjamaah,createitem,1,0,52,70
-,xui,,checkingstatus,,datetrans,,id,,panellistitem,,totaltrans,,transname
-,checkingstatus,,datetrans,,id,,panellistitem,,totaltrans,,transname
-
-historyjamaah,globals,0,1,13,28
-
-
-
-historyjamaah,jobdone,1,0,72,114
-,clv,,panellistitem,,panelqurban,,mainscroll,,xui,,checkingstatus,,datetrans,,id,,totaltrans,,transname
-,checkingstatus,,datetrans,,id,,panellistitem,,totaltrans,,transname
-,createitem
-historyjamaah,panellistitem_click,0,0,120,131
-,clv,,idselected,,statusselected
-,idselected,,statusselected
-
-historyjamaah,process_globals,0,1,6,11
 
 
 
@@ -705,46 +717,6 @@ tpajamaahdetail,spinpengurus_itemclick,0,0,124,133
 ,account,,spinpengurus,,accountid
 ,accountid
 
-poorjamaahdetail,activity_create,1,0,30,39
-,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,edittotal,,panelqurban,,spinpengurus,,pengurus
-,mainscroll,,navbartitle,,button1,,checkguna,,checkhamba,,edittotal,,panelqurban,,spinpengurus
-
-poorjamaahdetail,activity_pause,0,0,45,47
-
-
-
-poorjamaahdetail,activity_resume,0,0,41,43
-main,server,poorjamaah,id_clicked
-
-codesemua,executeurlget
-poorjamaahdetail,button1_click,0,0,96,98
-main,server,poorjamaah,id_clicked,homejamaah,id,,edittotal,,accountid,,publicid
-
-codesemua,executeurl
-poorjamaahdetail,checkguna_checkedchange,1,0,100,110
-,checkguna,,checkhamba,,publicid
-,publicid
-
-poorjamaahdetail,checkhamba_checkedchange,1,0,112,122
-,checkhamba,,checkguna,,publicid
-,publicid
-
-poorjamaahdetail,globals,0,1,12,28
-,account
-
-
-poorjamaahdetail,jobdone,1,0,49,93
-,notransaction,,navbartitle,,account,,spinpengurus
-,notransaction,,account
-
-poorjamaahdetail,process_globals,0,1,6,10
-
-
-
-poorjamaahdetail,spinpengurus_itemclick,0,0,124,132
-,account,,spinpengurus,,accountid
-,accountid
-
 poorjamaah,activity_create,1,1,29,38
 ,mainscroll,,navbartitle,,clv,,panelqurban
 ,mainscroll,,navbartitle,,clv,,panelqurban
@@ -781,34 +753,6 @@ poorjamaah,process_globals,0,1,6,11
 
 
 
-invoicejamaah,activity_create,1,0,32,39
-,mainscroll,,navbartitle,,btnconfirm,,label1,,label10,,label12,,label2,,label4,,label5,,label6,,label7,,label8,,panelpaidinfo,,panelqurban
-,mainscroll,,navbartitle,,btnconfirm,,label1,,label10,,label12,,label2,,label4,,label5,,label6,,label7,,label8,,panelpaidinfo,,panelqurban
-
-invoicejamaah,activity_pause,0,0,45,47
-
-
-
-invoicejamaah,activity_resume,0,0,41,43
-main,server,historyjamaah,idselected
-
-codesemua,executeurlget
-invoicejamaah,btnconfirm_click,0,0,134,136
-
-
-
-invoicejamaah,globals,0,1,12,30
-
-
-
-invoicejamaah,jobdone,0,0,49,132
-historyjamaah,statusselected,,navbartitle,,label1,,label2,,label4,,label12,,label10,,label5,,label6,,label7,,label8,homejamaah,username,,note
-
-
-invoicejamaah,process_globals,0,1,6,10
-
-
-
 starter2,download,0,0,29,43
 ,tasks,,cache,,ongoingtasks
 
@@ -833,28 +777,28 @@ starter2,service_start,0,0,20,23
 
 
 
-qurbanstewardshipdetail,activity_create,1,0,41,50
-,mainscroll,,navbartitle,,btnconfirm,,label12,,label4,,label5,,label6,,label7,,label8,,panelqurban,,part10,,part11,,part2,,part3,,part4,,part5,,part6,,part7,,part8,,part9
-,mainscroll,,navbartitle,,btnconfirm,,label12,,label4,,label5,,label6,,label7,,label8,,panelqurban,,part10,,part11,,part2,,part3,,part4,,part5,,part6,,part7,,part8,,part9
+qurbanstewardshipdetail,activity_create,1,0,36,45
+,mainscroll,,navbartitle,,btnconfirm,,label1,,label10,,label12,,label2,,label4,,label5,,label6,,label7,,labeldate,,panelpaidinfo,,panelqurban,,valueconfirmation,,valuepaid,,valuepaymentinfo,,valuestatus,,valueunpaid
+,mainscroll,,navbartitle,,btnconfirm,,label1,,label10,,label12,,label2,,label4,,label5,,label6,,label7,,labeldate,,panelpaidinfo,,panelqurban,,valueconfirmation,,valuepaid,,valuepaymentinfo,,valuestatus,,valueunpaid
 
-qurbanstewardshipdetail,activity_pause,0,0,56,58
+qurbanstewardshipdetail,activity_pause,0,0,53,55
 
 
 
-qurbanstewardshipdetail,activity_resume,0,0,52,54
-main,server,qurbanstewardship,idselected
+qurbanstewardshipdetail,activity_resume,0,1,47,51
+qurbanstewardship,idselected,main,server
+qurbanstewardship,idselected
+codesemua,executeurlget
+qurbanstewardshipdetail,btnconfirm_click,1,1,95,98
+main,server,qurbanstewardship,idselected,,valueconfirmation,,valueunpaid
 
 codesemua,executeurlget
-qurbanstewardshipdetail,btnconfirm_click,1,0,388,391
-main,server,qurbanstewardship,idselected
-
-codesemua,executeurlget
-qurbanstewardshipdetail,globals,0,1,12,39
+qurbanstewardshipdetail,globals,0,1,12,34
 
 
 
-qurbanstewardshipdetail,jobdone,0,0,60,386
-,label4,,label6,,label8,,label12,,part2,,part3,,part4,,part5,,part6,,part7,,part8,,part9,,part10,,part11
+qurbanstewardshipdetail,jobdone,0,1,57,93
+,label2,,labeldate,,label4,,label6,,label10,,valueunpaid,,valuepaid,,valuestatus,,valuepaymentinfo,,valueconfirmation,,btnconfirm
 
 
 qurbanstewardshipdetail,process_globals,0,1,6,10
@@ -862,8 +806,8 @@ qurbanstewardshipdetail,process_globals,0,1,6,10
 
 
 webview,activity_create,1,0,21,33
-,mainscroll,,navbar,,topnavbar,,web,,webview1,main,server
-,mainscroll,,navbar,,topnavbar,,web,,webview1
+,mainscroll,,navbar,,topnavbar,,webview1,main,server,,web
+,mainscroll,,navbar,,topnavbar,,webview1
 
 webview,activity_pause,0,0,39,41
 

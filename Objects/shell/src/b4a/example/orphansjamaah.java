@@ -73,27 +73,26 @@ public static RemoteObject _idpro = RemoteObject.declareNull("anywheresoftware.b
 public static RemoteObject _httputils2service = RemoteObject.declareNull("anywheresoftware.b4a.samples.httputils2.httputils2service");
 public static b4a.example.main _main = null;
 public static b4a.example.starter _starter = null;
+public static b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
 public static b4a.example.homejamaah _homejamaah = null;
 public static b4a.example.qurbanjamaah _qurbanjamaah = null;
-public static b4a.example.qurbanjamaahdetail _qurbanjamaahdetail = null;
+public static b4a.example.codesemua _codesemua = null;
+public static b4a.example.poorjamaahdetail _poorjamaahdetail = null;
+public static b4a.example.invoicejamaah _invoicejamaah = null;
+public static b4a.example.historyjamaah _historyjamaah = null;
+public static b4a.example.homestewardship _homestewardship = null;
 public static b4a.example.orphansjamaahdetail _orphansjamaahdetail = null;
 public static b4a.example.mapsjamaah _mapsjamaah = null;
-public static b4a.example.donationstewardship _donationstewardship = null;
 public static b4a.example.donationjamaahdetail _donationjamaahdetail = null;
-public static b4a.example.homestewardship _homestewardship = null;
 public static b4a.example.qurbanstewardship _qurbanstewardship = null;
-public static b4a.example.historyjamaah _historyjamaah = null;
 public static b4a.example.donationjamaah _donationjamaah = null;
-public static b4a.example.codesemua _codesemua = null;
 public static b4a.example.tpajamaah _tpajamaah = null;
 public static b4a.example.tpajamaahdetail _tpajamaahdetail = null;
-public static b4a.example.poorjamaahdetail _poorjamaahdetail = null;
 public static b4a.example.poorjamaah _poorjamaah = null;
-public static b4a.example.invoicejamaah _invoicejamaah = null;
 public static b4a.example.starter2 _starter2 = null;
 public static b4a.example.qurbanstewardshipdetail _qurbanstewardshipdetail = null;
 public static b4a.example.webview _webview = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",orphansjamaah.mostCurrent._activity,"Address",orphansjamaah.mostCurrent._address,"BtnDonationHere",orphansjamaah.mostCurrent._btndonationhere,"CLV",orphansjamaah.mostCurrent._clv,"CodeSemua",Debug.moduleToString(b4a.example.codesemua.class),"DonationJamaah",Debug.moduleToString(b4a.example.donationjamaah.class),"DonationJamaahDetail",Debug.moduleToString(b4a.example.donationjamaahdetail.class),"DonationStewardship",Debug.moduleToString(b4a.example.donationstewardship.class),"fund",orphansjamaah._fund,"HistoryJamaah",Debug.moduleToString(b4a.example.historyjamaah.class),"HomeJamaah",Debug.moduleToString(b4a.example.homejamaah.class),"HomeStewardship",Debug.moduleToString(b4a.example.homestewardship.class),"HttpUtils2Service",orphansjamaah.mostCurrent._httputils2service,"id",orphansjamaah._id,"id_clicked",orphansjamaah._id_clicked,"IDpro",orphansjamaah.mostCurrent._idpro,"InvoiceJamaah",Debug.moduleToString(b4a.example.invoicejamaah.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainScroll",orphansjamaah.mostCurrent._mainscroll,"MapsJamaah",Debug.moduleToString(b4a.example.mapsjamaah.class),"MosqueName",orphansjamaah.mostCurrent._mosquename,"name_project",orphansjamaah._name_project,"NavbarTitle",orphansjamaah.mostCurrent._navbartitle,"OrphansJamaahDetail",Debug.moduleToString(b4a.example.orphansjamaahdetail.class),"PanelListItem",orphansjamaah.mostCurrent._panellistitem,"PanelQurban",orphansjamaah.mostCurrent._panelqurban,"PoorJamaah",Debug.moduleToString(b4a.example.poorjamaah.class),"PoorJamaahDetail",Debug.moduleToString(b4a.example.poorjamaahdetail.class),"QurbanJamaah",Debug.moduleToString(b4a.example.qurbanjamaah.class),"QurbanJamaahDetail",Debug.moduleToString(b4a.example.qurbanjamaahdetail.class),"QurbanStewardship",Debug.moduleToString(b4a.example.qurbanstewardship.class),"QurbanStewardshipDetail",Debug.moduleToString(b4a.example.qurbanstewardshipdetail.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"Starter2",Debug.moduleToString(b4a.example.starter2.class),"Status",orphansjamaah.mostCurrent._status,"TpaJamaah",Debug.moduleToString(b4a.example.tpajamaah.class),"TpaJamaahDetail",Debug.moduleToString(b4a.example.tpajamaahdetail.class),"WebView",Debug.moduleToString(b4a.example.webview.class),"xui",orphansjamaah._xui};
+		return new Object[] {"Activity",orphansjamaah.mostCurrent._activity,"Address",orphansjamaah.mostCurrent._address,"BtnDonationHere",orphansjamaah.mostCurrent._btndonationhere,"CLV",orphansjamaah.mostCurrent._clv,"CodeSemua",Debug.moduleToString(b4a.example.codesemua.class),"DonationJamaah",Debug.moduleToString(b4a.example.donationjamaah.class),"DonationJamaahDetail",Debug.moduleToString(b4a.example.donationjamaahdetail.class),"fund",orphansjamaah._fund,"HistoryJamaah",Debug.moduleToString(b4a.example.historyjamaah.class),"HomeJamaah",Debug.moduleToString(b4a.example.homejamaah.class),"HomeStewardship",Debug.moduleToString(b4a.example.homestewardship.class),"HttpUtils2Service",orphansjamaah.mostCurrent._httputils2service,"id",orphansjamaah._id,"id_clicked",orphansjamaah._id_clicked,"IDpro",orphansjamaah.mostCurrent._idpro,"InvoiceJamaah",Debug.moduleToString(b4a.example.invoicejamaah.class),"Main",Debug.moduleToString(b4a.example.main.class),"MainScroll",orphansjamaah.mostCurrent._mainscroll,"MapsJamaah",Debug.moduleToString(b4a.example.mapsjamaah.class),"MosqueName",orphansjamaah.mostCurrent._mosquename,"name_project",orphansjamaah._name_project,"NavbarTitle",orphansjamaah.mostCurrent._navbartitle,"OrphansJamaahDetail",Debug.moduleToString(b4a.example.orphansjamaahdetail.class),"PanelListItem",orphansjamaah.mostCurrent._panellistitem,"PanelQurban",orphansjamaah.mostCurrent._panelqurban,"PoorJamaah",Debug.moduleToString(b4a.example.poorjamaah.class),"PoorJamaahDetail",Debug.moduleToString(b4a.example.poorjamaahdetail.class),"QurbanJamaah",Debug.moduleToString(b4a.example.qurbanjamaah.class),"QurbanJamaahDetail",Debug.moduleToString(b4a.example.qurbanjamaahdetail.class),"QurbanStewardship",Debug.moduleToString(b4a.example.qurbanstewardship.class),"QurbanStewardshipDetail",Debug.moduleToString(b4a.example.qurbanstewardshipdetail.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"Starter2",Debug.moduleToString(b4a.example.starter2.class),"Status",orphansjamaah.mostCurrent._status,"TpaJamaah",Debug.moduleToString(b4a.example.tpajamaah.class),"TpaJamaahDetail",Debug.moduleToString(b4a.example.tpajamaahdetail.class),"WebView",Debug.moduleToString(b4a.example.webview.class),"xui",orphansjamaah._xui};
 }
 }

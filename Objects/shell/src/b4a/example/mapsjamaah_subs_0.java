@@ -8,7 +8,7 @@ public class mapsjamaah_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,31);
+		Debug.PushSubsStack("Activity_Create (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,31);
 if (RapidSub.canDelegate("activity_create")) return b4a.example.mapsjamaah.remoteMe.runUserSub(false, "mapsjamaah","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 31;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -76,7 +76,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,86);
+		Debug.PushSubsStack("Activity_Pause (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,86);
 if (RapidSub.canDelegate("activity_pause")) return b4a.example.mapsjamaah.remoteMe.runUserSub(false, "mapsjamaah","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 86;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -110,7 +110,7 @@ RemoteObject _result = RemoteObject.createImmutable(false);
 @Override
 public void resume(BA ba, RemoteObject result) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,56);
+		Debug.PushSubsStack("Activity_Resume (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,56);
 if (RapidSub.canDelegate("activity_resume")) return ;
 Debug.locals = rsLocals;Debug.currentSubFrame.locals = rsLocals;
 
@@ -250,7 +250,7 @@ public static void  _activity_permissionresult(RemoteObject _permission,RemoteOb
 }
 public static RemoteObject  _btnsearch_click() throws Exception{
 try {
-		Debug.PushSubsStack("btnSearch_Click (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,115);
+		Debug.PushSubsStack("btnSearch_Click (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,115);
 if (RapidSub.canDelegate("btnsearch_click")) return b4a.example.mapsjamaah.remoteMe.runUserSub(false, "mapsjamaah","btnsearch_click");
  BA.debugLineNum = 115;BA.debugLine="Sub btnSearch_Click";
 Debug.ShouldStop(262144);
@@ -360,7 +360,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,90);
+		Debug.PushSubsStack("JobDone (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,90);
 if (RapidSub.canDelegate("jobdone")) return b4a.example.mapsjamaah.remoteMe.runUserSub(false, "mapsjamaah","jobdone", _job);
 RemoteObject _res = RemoteObject.createImmutable("");
 RemoteObject _parser = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.JSONParser");
@@ -437,7 +437,7 @@ finally {
 		}}
 public static RemoteObject  _mywebview_pagefinished(RemoteObject _url) throws Exception{
 try {
-		Debug.PushSubsStack("myWebView_PageFinished (mapsjamaah) ","mapsjamaah",6,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,142);
+		Debug.PushSubsStack("myWebView_PageFinished (mapsjamaah) ","mapsjamaah",11,mapsjamaah.mostCurrent.activityBA,mapsjamaah.mostCurrent,142);
 if (RapidSub.canDelegate("mywebview_pagefinished")) return b4a.example.mapsjamaah.remoteMe.runUserSub(false, "mapsjamaah","mywebview_pagefinished", _url);
 RemoteObject _obj1 = RemoteObject.declareNull("anywheresoftware.b4a.agraham.reflection.Reflection");
 Debug.locals.put("Url", _url);

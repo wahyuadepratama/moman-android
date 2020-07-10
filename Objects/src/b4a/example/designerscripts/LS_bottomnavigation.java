@@ -35,62 +35,54 @@ views.get("mainscroll").vw.setHeight((int)((100d / 100 * height)));
 views.get("navbar").vw.setTop((int)((views.get("mainscroll").vw.getHeight())-(10d / 100 * height)));
 //BA.debugLineNum = 15;BA.debugLine="Navbar.Height=10%y"[BottomNavigation/General script]
 views.get("navbar").vw.setHeight((int)((10d / 100 * height)));
-//BA.debugLineNum = 18;BA.debugLine="Profile.SetLeftAndRight(15%x,25%x)"[BottomNavigation/General script]
-views.get("profile").vw.setLeft((int)((15d / 100 * width)));
-views.get("profile").vw.setWidth((int)((25d / 100 * width) - ((15d / 100 * width))));
-//BA.debugLineNum = 19;BA.debugLine="Profile.Top = 2%y"[BottomNavigation/General script]
+//BA.debugLineNum = 17;BA.debugLine="PanelProfile.Width = 50%x"[BottomNavigation/General script]
+views.get("panelprofile").vw.setWidth((int)((50d / 100 * width)));
+//BA.debugLineNum = 18;BA.debugLine="PanelProfile.Left=0%x"[BottomNavigation/General script]
+views.get("panelprofile").vw.setLeft((int)((0d / 100 * width)));
+//BA.debugLineNum = 19;BA.debugLine="PanelProfile.Top = 0%y"[BottomNavigation/General script]
+views.get("panelprofile").vw.setTop((int)((0d / 100 * height)));
+//BA.debugLineNum = 20;BA.debugLine="PanelProfile.Height = Navbar.Height"[BottomNavigation/General script]
+views.get("panelprofile").vw.setHeight((int)((views.get("navbar").vw.getHeight())));
+//BA.debugLineNum = 22;BA.debugLine="PanelQurban.Width = 50%x"[BottomNavigation/General script]
+views.get("panelqurban").vw.setWidth((int)((50d / 100 * width)));
+//BA.debugLineNum = 23;BA.debugLine="PanelQurban.Left=PanelProfile.Width+PanelProfile.Left"[BottomNavigation/General script]
+views.get("panelqurban").vw.setLeft((int)((views.get("panelprofile").vw.getWidth())+(views.get("panelprofile").vw.getLeft())));
+//BA.debugLineNum = 24;BA.debugLine="PanelQurban.Top = 0%y"[BottomNavigation/General script]
+views.get("panelqurban").vw.setTop((int)((0d / 100 * height)));
+//BA.debugLineNum = 25;BA.debugLine="PanelQurban.Height =Navbar.Height"[BottomNavigation/General script]
+views.get("panelqurban").vw.setHeight((int)((views.get("navbar").vw.getHeight())));
+//BA.debugLineNum = 28;BA.debugLine="Profile.Width = 5%x"[BottomNavigation/General script]
+views.get("profile").vw.setWidth((int)((5d / 100 * width)));
+//BA.debugLineNum = 29;BA.debugLine="Profile.Left=(PanelProfile.Width-Profile.Width)/2"[BottomNavigation/General script]
+views.get("profile").vw.setLeft((int)(((views.get("panelprofile").vw.getWidth())-(views.get("profile").vw.getWidth()))/2d));
+//BA.debugLineNum = 30;BA.debugLine="Profile.Top = 2%y"[BottomNavigation/General script]
 views.get("profile").vw.setTop((int)((2d / 100 * height)));
-//BA.debugLineNum = 20;BA.debugLine="Profile.Width = 50"[BottomNavigation/General script]
-views.get("profile").vw.setWidth((int)(50d));
-//BA.debugLineNum = 21;BA.debugLine="Profile.Height = 50"[BottomNavigation/General script]
-views.get("profile").vw.setHeight((int)(50d));
-//BA.debugLineNum = 23;BA.debugLine="LProfile.SetLeftAndRight(14%x,26%x)"[BottomNavigation/General script]
-views.get("lprofile").vw.setLeft((int)((14d / 100 * width)));
-views.get("lprofile").vw.setWidth((int)((26d / 100 * width) - ((14d / 100 * width))));
-//BA.debugLineNum = 24;BA.debugLine="LProfile.Top = Profile.Height"[BottomNavigation/General script]
-views.get("lprofile").vw.setTop((int)((views.get("profile").vw.getHeight())));
-//BA.debugLineNum = 27;BA.debugLine="Donation.SetLeftAndRight(36%x,46%x)"[BottomNavigation/General script]
-views.get("donation").vw.setLeft((int)((36d / 100 * width)));
-views.get("donation").vw.setWidth((int)((46d / 100 * width) - ((36d / 100 * width))));
-//BA.debugLineNum = 28;BA.debugLine="Donation.Top = 2%y"[BottomNavigation/General script]
-views.get("donation").vw.setTop((int)((2d / 100 * height)));
-//BA.debugLineNum = 29;BA.debugLine="Donation.Width = 50"[BottomNavigation/General script]
-views.get("donation").vw.setWidth((int)(50d));
-//BA.debugLineNum = 30;BA.debugLine="Donation.Height = 50"[BottomNavigation/General script]
-views.get("donation").vw.setHeight((int)(50d));
-//BA.debugLineNum = 32;BA.debugLine="LDonation.SetLeftAndRight(33%x,47%x)"[BottomNavigation/General script]
-views.get("ldonation").vw.setLeft((int)((33d / 100 * width)));
-views.get("ldonation").vw.setWidth((int)((47d / 100 * width) - ((33d / 100 * width))));
-//BA.debugLineNum = 33;BA.debugLine="LDonation.Top = Profile.Height"[BottomNavigation/General script]
-views.get("ldonation").vw.setTop((int)((views.get("profile").vw.getHeight())));
-//BA.debugLineNum = 36;BA.debugLine="Qurban.SetLeftAndRight(55%x,65%x)"[BottomNavigation/General script]
-views.get("qurban").vw.setLeft((int)((55d / 100 * width)));
-views.get("qurban").vw.setWidth((int)((65d / 100 * width) - ((55d / 100 * width))));
-//BA.debugLineNum = 37;BA.debugLine="Qurban.Top = 2%y"[BottomNavigation/General script]
+//BA.debugLineNum = 31;BA.debugLine="Profile.Height = Profile.Width"[BottomNavigation/General script]
+views.get("profile").vw.setHeight((int)((views.get("profile").vw.getWidth())));
+//BA.debugLineNum = 33;BA.debugLine="LProfile.Width = 20%x"[BottomNavigation/General script]
+views.get("lprofile").vw.setWidth((int)((20d / 100 * width)));
+//BA.debugLineNum = 34;BA.debugLine="LProfile.Left=(PanelProfile.Width-LProfile.Width)/2"[BottomNavigation/General script]
+views.get("lprofile").vw.setLeft((int)(((views.get("panelprofile").vw.getWidth())-(views.get("lprofile").vw.getWidth()))/2d));
+//BA.debugLineNum = 35;BA.debugLine="LProfile.Top = Profile.Height+Profile.Top"[BottomNavigation/General script]
+views.get("lprofile").vw.setTop((int)((views.get("profile").vw.getHeight())+(views.get("profile").vw.getTop())));
+//BA.debugLineNum = 36;BA.debugLine="LProfile.Height = 8%y"[BottomNavigation/General script]
+views.get("lprofile").vw.setHeight((int)((8d / 100 * height)));
+//BA.debugLineNum = 39;BA.debugLine="Qurban.Width = 5%x"[BottomNavigation/General script]
+views.get("qurban").vw.setWidth((int)((5d / 100 * width)));
+//BA.debugLineNum = 40;BA.debugLine="Qurban.Left=(PanelQurban.Width-Qurban.Width)/2"[BottomNavigation/General script]
+views.get("qurban").vw.setLeft((int)(((views.get("panelqurban").vw.getWidth())-(views.get("qurban").vw.getWidth()))/2d));
+//BA.debugLineNum = 41;BA.debugLine="Qurban.Top = 2%y"[BottomNavigation/General script]
 views.get("qurban").vw.setTop((int)((2d / 100 * height)));
-//BA.debugLineNum = 38;BA.debugLine="Qurban.Width = 50"[BottomNavigation/General script]
-views.get("qurban").vw.setWidth((int)(50d));
-//BA.debugLineNum = 39;BA.debugLine="Qurban.Height = 50"[BottomNavigation/General script]
-views.get("qurban").vw.setHeight((int)(50d));
-//BA.debugLineNum = 41;BA.debugLine="LQurban.SetLeftAndRight(54%x,66%x)"[BottomNavigation/General script]
-views.get("lqurban").vw.setLeft((int)((54d / 100 * width)));
-views.get("lqurban").vw.setWidth((int)((66d / 100 * width) - ((54d / 100 * width))));
-//BA.debugLineNum = 42;BA.debugLine="LQurban.Top = Profile.Height"[BottomNavigation/General script]
-views.get("lqurban").vw.setTop((int)((views.get("profile").vw.getHeight())));
-//BA.debugLineNum = 45;BA.debugLine="Web.SetLeftAndRight(76%x,86%x)"[BottomNavigation/General script]
-views.get("web").vw.setLeft((int)((76d / 100 * width)));
-views.get("web").vw.setWidth((int)((86d / 100 * width) - ((76d / 100 * width))));
-//BA.debugLineNum = 46;BA.debugLine="Web.Top = 2%y"[BottomNavigation/General script]
-views.get("web").vw.setTop((int)((2d / 100 * height)));
-//BA.debugLineNum = 47;BA.debugLine="Web.Width = 50"[BottomNavigation/General script]
-views.get("web").vw.setWidth((int)(50d));
-//BA.debugLineNum = 48;BA.debugLine="Web.Height = 50"[BottomNavigation/General script]
-views.get("web").vw.setHeight((int)(50d));
-//BA.debugLineNum = 50;BA.debugLine="LWeb.SetLeftAndRight(72%x,88%x)"[BottomNavigation/General script]
-views.get("lweb").vw.setLeft((int)((72d / 100 * width)));
-views.get("lweb").vw.setWidth((int)((88d / 100 * width) - ((72d / 100 * width))));
-//BA.debugLineNum = 51;BA.debugLine="LWeb.Top = Profile.Height"[BottomNavigation/General script]
-views.get("lweb").vw.setTop((int)((views.get("profile").vw.getHeight())));
+//BA.debugLineNum = 42;BA.debugLine="Qurban.Height = Qurban.Width"[BottomNavigation/General script]
+views.get("qurban").vw.setHeight((int)((views.get("qurban").vw.getWidth())));
+//BA.debugLineNum = 44;BA.debugLine="LQurban.Width = 20%x"[BottomNavigation/General script]
+views.get("lqurban").vw.setWidth((int)((20d / 100 * width)));
+//BA.debugLineNum = 45;BA.debugLine="LQurban.Left=(PanelQurban.Width-LQurban.Width)/2"[BottomNavigation/General script]
+views.get("lqurban").vw.setLeft((int)(((views.get("panelqurban").vw.getWidth())-(views.get("lqurban").vw.getWidth()))/2d));
+//BA.debugLineNum = 46;BA.debugLine="LQurban.Top = Qurban.Height+Qurban.Top"[BottomNavigation/General script]
+views.get("lqurban").vw.setTop((int)((views.get("qurban").vw.getHeight())+(views.get("qurban").vw.getTop())));
+//BA.debugLineNum = 47;BA.debugLine="LQurban.Height = 8%y"[BottomNavigation/General script]
+views.get("lqurban").vw.setHeight((int)((8d / 100 * height)));
 
 }
 }

@@ -8,7 +8,7 @@ public class orphansjamaah_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,29);
+		Debug.PushSubsStack("Activity_Create (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,29);
 if (RapidSub.canDelegate("activity_create")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 29;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -40,7 +40,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,44);
+		Debug.PushSubsStack("Activity_Pause (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,44);
 if (RapidSub.canDelegate("activity_pause")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 44;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -57,7 +57,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,40);
+		Debug.PushSubsStack("Activity_Resume (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,40);
 if (RapidSub.canDelegate("activity_resume")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","activity_resume");
  BA.debugLineNum = 40;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(128);
@@ -76,7 +76,7 @@ finally {
 		}}
 public static RemoteObject  _btndonationhere_click() throws Exception{
 try {
-		Debug.PushSubsStack("BtnDonationHere_Click (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,103);
+		Debug.PushSubsStack("BtnDonationHere_Click (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,103);
 if (RapidSub.canDelegate("btndonationhere_click")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","btndonationhere_click");
 RemoteObject _item = RemoteObject.createImmutable(0);
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
@@ -116,7 +116,7 @@ finally {
 		}}
 public static RemoteObject  _clv_itemclick(RemoteObject _index,RemoteObject _value) throws Exception{
 try {
-		Debug.PushSubsStack("CLV_ItemClick (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,99);
+		Debug.PushSubsStack("CLV_ItemClick (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,99);
 if (RapidSub.canDelegate("clv_itemclick")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","clv_itemclick", _index, _value);
 Debug.locals.put("Index", _index);
 Debug.locals.put("Value", _value);
@@ -137,7 +137,7 @@ finally {
 		}}
 public static RemoteObject  _createitem(RemoteObject _idproject,RemoteObject _mosquetxt,RemoteObject _addresstxt,RemoteObject _statustxt) throws Exception{
 try {
-		Debug.PushSubsStack("CreateItem (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,86);
+		Debug.PushSubsStack("CreateItem (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,86);
 if (RapidSub.canDelegate("createitem")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","createitem", _idproject, _mosquetxt, _addresstxt, _statustxt);
 RemoteObject _p = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 Debug.locals.put("idproject", _idproject);
@@ -170,7 +170,7 @@ Debug.ShouldStop(536870912);
 orphansjamaah.mostCurrent._status.runMethod(true,"setText",BA.ObjectToCharSequence(_statustxt));
  BA.debugLineNum = 96;BA.debugLine="Return p";
 Debug.ShouldStop(-2147483648);
-if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _p.getObject());
+Debug.CheckDeviceExceptions();if (true) return RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.PanelWrapper"), _p.getObject());
  BA.debugLineNum = 97;BA.debugLine="End Sub";
 Debug.ShouldStop(1);
 return RemoteObject.createImmutable(null);
@@ -208,7 +208,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (orphansjamaah) ","orphansjamaah",11,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,48);
+		Debug.PushSubsStack("JobDone (orphansjamaah) ","orphansjamaah",14,orphansjamaah.mostCurrent.activityBA,orphansjamaah.mostCurrent,48);
 if (RapidSub.canDelegate("jobdone")) return b4a.example.orphansjamaah.remoteMe.runUserSub(false, "orphansjamaah","jobdone", _job);
 RemoteObject _res = RemoteObject.createImmutable("");
 RemoteObject _parser = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.JSONParser");

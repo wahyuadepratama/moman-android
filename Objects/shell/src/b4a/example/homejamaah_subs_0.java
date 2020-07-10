@@ -8,7 +8,7 @@ public class homejamaah_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,40);
+		Debug.PushSubsStack("Activity_Create (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,40);
 if (RapidSub.canDelegate("activity_create")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 40;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -55,7 +55,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,62);
+		Debug.PushSubsStack("Activity_Pause (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,62);
 if (RapidSub.canDelegate("activity_pause")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 62;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -72,7 +72,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,58);
+		Debug.PushSubsStack("Activity_Resume (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,58);
 if (RapidSub.canDelegate("activity_resume")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","activity_resume");
  BA.debugLineNum = 58;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(33554432);
@@ -91,15 +91,15 @@ finally {
 		}}
 public static RemoteObject  _constructionbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("constructionBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,117);
+		Debug.PushSubsStack("constructionBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,115);
 if (RapidSub.canDelegate("constructionbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","constructionbtn_click");
- BA.debugLineNum = 117;BA.debugLine="Sub constructionBtn_Click";
-Debug.ShouldStop(1048576);
- BA.debugLineNum = 118;BA.debugLine="StartActivity(DonationJamaah)";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 115;BA.debugLine="Sub constructionBtn_Click";
+Debug.ShouldStop(262144);
+ BA.debugLineNum = 116;BA.debugLine="StartActivity(DonationJamaah)";
+Debug.ShouldStop(524288);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._donationjamaah.getObject())));
- BA.debugLineNum = 119;BA.debugLine="End Sub";
-Debug.ShouldStop(4194304);
+ BA.debugLineNum = 117;BA.debugLine="End Sub";
+Debug.ShouldStop(1048576);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -159,15 +159,15 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _historybtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("historyBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,141);
+		Debug.PushSubsStack("historyBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,139);
 if (RapidSub.canDelegate("historybtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","historybtn_click");
- BA.debugLineNum = 141;BA.debugLine="Sub historyBtn_Click";
-Debug.ShouldStop(4096);
- BA.debugLineNum = 142;BA.debugLine="StartActivity(HistoryJamaah)";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 139;BA.debugLine="Sub historyBtn_Click";
+Debug.ShouldStop(1024);
+ BA.debugLineNum = 140;BA.debugLine="StartActivity(HistoryJamaah)";
+Debug.ShouldStop(2048);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._historyjamaah.getObject())));
- BA.debugLineNum = 143;BA.debugLine="End Sub";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 141;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -178,7 +178,7 @@ finally {
 		}}
 public static RemoteObject  _jobdone(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,66);
+		Debug.PushSubsStack("JobDone (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,66);
 if (RapidSub.canDelegate("jobdone")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","jobdone", _job);
 RemoteObject _res = RemoteObject.createImmutable("");
 RemoteObject _parser = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.JSONParser");
@@ -224,74 +224,71 @@ _a = _parser.runMethod(false,"NextObject");Debug.locals.put("a", _a);
  BA.debugLineNum = 79;BA.debugLine="id = Main.manager.GetString(\"id\")";
 Debug.ShouldStop(16384);
 homejamaah._id = homejamaah.mostCurrent._main._manager.runMethod(true,"GetString",(Object)(RemoteObject.createImmutable("id")));
- BA.debugLineNum = 80;BA.debugLine="username = a.Get(\"username\")";
-Debug.ShouldStop(32768);
-homejamaah._username = BA.ObjectToString(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("username")))));
- BA.debugLineNum = 81;BA.debugLine="phone = a.Get(\"phone\")";
+ BA.debugLineNum = 81;BA.debugLine="LabelName.TextColor = Colors.Black";
 Debug.ShouldStop(65536);
-homejamaah._phone = BA.ObjectToString(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("phone")))));
- BA.debugLineNum = 82;BA.debugLine="status = a.Get(\"status\")";
-Debug.ShouldStop(131072);
-homejamaah._status = BA.ObjectToString(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("status")))));
- BA.debugLineNum = 84;BA.debugLine="LabelName.TextColor = Colors.Black";
-Debug.ShouldStop(524288);
 homejamaah.mostCurrent._labelname.runMethod(true,"setTextColor",homejamaah.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 85;BA.debugLine="LabelNumber.TextColor = Colors.Black";
-Debug.ShouldStop(1048576);
+ BA.debugLineNum = 82;BA.debugLine="LabelNumber.TextColor = Colors.Black";
+Debug.ShouldStop(131072);
 homejamaah.mostCurrent._labelnumber.runMethod(true,"setTextColor",homejamaah.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 86;BA.debugLine="LabelUser.TextColor = Colors.Black";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 83;BA.debugLine="LabelUser.TextColor = Colors.Black";
+Debug.ShouldStop(262144);
 homejamaah.mostCurrent._labeluser.runMethod(true,"setTextColor",homejamaah.mostCurrent.__c.getField(false,"Colors").getField(true,"Black"));
- BA.debugLineNum = 88;BA.debugLine="LabelName.Text = username";
+ BA.debugLineNum = 85;BA.debugLine="LabelName.Text = a.Get(\"name\")&\" / @\"&a.Get(\"";
+Debug.ShouldStop(1048576);
+homejamaah.mostCurrent._labelname.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("name")))),RemoteObject.createImmutable(" / @"),_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("username")))))));
+ BA.debugLineNum = 86;BA.debugLine="LabelNumber.Text = a.Get(\"id\")";
+Debug.ShouldStop(2097152);
+homejamaah.mostCurrent._labelnumber.runMethod(true,"setText",BA.ObjectToCharSequence(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("id"))))));
+ BA.debugLineNum = 87;BA.debugLine="LabelUser.Text = a.Get(\"phone\")";
+Debug.ShouldStop(4194304);
+homejamaah.mostCurrent._labeluser.runMethod(true,"setText",BA.ObjectToCharSequence(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("phone"))))));
+ BA.debugLineNum = 88;BA.debugLine="Main.username = a.Get(\"username\")";
 Debug.ShouldStop(8388608);
-homejamaah.mostCurrent._labelname.runMethod(true,"setText",BA.ObjectToCharSequence(homejamaah._username));
- BA.debugLineNum = 89;BA.debugLine="LabelNumber.Text = \"Jamaah \"&a.Get(\"worship_n";
+homejamaah.mostCurrent._main._username = BA.ObjectToString(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("username")))));
+ BA.debugLineNum = 89;BA.debugLine="Main.id = a.Get(\"id\")";
 Debug.ShouldStop(16777216);
-homejamaah.mostCurrent._labelnumber.runMethod(true,"setText",BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Jamaah "),_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("worship_name")))))));
- BA.debugLineNum = 90;BA.debugLine="LabelUser.Text = phone";
-Debug.ShouldStop(33554432);
-homejamaah.mostCurrent._labeluser.runMethod(true,"setText",BA.ObjectToCharSequence(homejamaah._phone));
- BA.debugLineNum = 93;BA.debugLine="Dim path As String = \"\"&Main.server&\"images/a";
-Debug.ShouldStop(268435456);
+homejamaah.mostCurrent._main._id = BA.ObjectToString(_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("id")))));
+ BA.debugLineNum = 91;BA.debugLine="Dim path As String = \"\"&Main.server&\"images/a";
+Debug.ShouldStop(67108864);
 _path = RemoteObject.concat(RemoteObject.createImmutable(""),homejamaah.mostCurrent._main._server,RemoteObject.createImmutable("images/avatar/"),_a.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("avatar")))));Debug.locals.put("path", _path);Debug.locals.put("path", _path);
- BA.debugLineNum = 94;BA.debugLine="Dim m As Map";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 92;BA.debugLine="Dim m As Map";
+Debug.ShouldStop(134217728);
 _m = RemoteObject.createNew ("anywheresoftware.b4a.objects.collections.Map");Debug.locals.put("m", _m);
- BA.debugLineNum = 95;BA.debugLine="m.Initialize";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 93;BA.debugLine="m.Initialize";
+Debug.ShouldStop(268435456);
 _m.runVoidMethod ("Initialize");
- BA.debugLineNum = 96;BA.debugLine="m.Put(PanelPhoto,path)";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 94;BA.debugLine="m.Put(PanelPhoto,path)";
+Debug.ShouldStop(536870912);
 _m.runVoidMethod ("Put",(Object)((homejamaah.mostCurrent._panelphoto.getObject())),(Object)((_path)));
- BA.debugLineNum = 97;BA.debugLine="CallSubDelayed2(Starter, \"Download\", m)";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 95;BA.debugLine="CallSubDelayed2(Starter, \"Download\", m)";
+Debug.ShouldStop(1073741824);
 homejamaah.mostCurrent.__c.runVoidMethod ("CallSubDelayed2",homejamaah.processBA,(Object)((homejamaah.mostCurrent._starter.getObject())),(Object)(BA.ObjectToString("Download")),(Object)((_m)));
  Debug.CheckDeviceExceptions();
 } 
-       catch (Exception e29) {
-			BA.rdebugUtils.runVoidMethod("setLastException",homejamaah.processBA, e29.toString()); BA.debugLineNum = 100;BA.debugLine="Log(LastException)";
-Debug.ShouldStop(8);
+       catch (Exception e28) {
+			BA.rdebugUtils.runVoidMethod("setLastException",homejamaah.processBA, e28.toString()); BA.debugLineNum = 98;BA.debugLine="Log(LastException)";
+Debug.ShouldStop(2);
 homejamaah.mostCurrent.__c.runVoidMethod ("Log",(Object)(BA.ObjectToString(homejamaah.mostCurrent.__c.runMethod(false,"LastException",homejamaah.mostCurrent.activityBA))));
- BA.debugLineNum = 101;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login Fa";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 99;BA.debugLine="Msgbox(\"Wrong username or password\",\"Login Fa";
+Debug.ShouldStop(4);
 homejamaah.mostCurrent.__c.runVoidMethodAndSync ("Msgbox",(Object)(BA.ObjectToCharSequence("Wrong username or password")),(Object)(BA.ObjectToCharSequence(RemoteObject.createImmutable("Login Failed"))),homejamaah.mostCurrent.activityBA);
  };
  break; }
 }
 ;
  }else {
- BA.debugLineNum = 105;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
-Debug.ShouldStop(256);
+ BA.debugLineNum = 103;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
+Debug.ShouldStop(64);
 homejamaah.mostCurrent.__c.runVoidMethod ("Log",(Object)(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage"))));
- BA.debugLineNum = 106;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 104;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessage, T";
+Debug.ShouldStop(128);
 homejamaah.mostCurrent.__c.runVoidMethod ("ToastMessageShow",(Object)(BA.ObjectToCharSequence(RemoteObject.concat(RemoteObject.createImmutable("Error: "),_job.getField(true,"_errormessage")))),(Object)(homejamaah.mostCurrent.__c.getField(true,"True")));
  };
- BA.debugLineNum = 108;BA.debugLine="Job.Release";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 106;BA.debugLine="Job.Release";
+Debug.ShouldStop(512);
 _job.runVoidMethod ("_release");
- BA.debugLineNum = 109;BA.debugLine="End Sub";
-Debug.ShouldStop(4096);
+ BA.debugLineNum = 107;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -302,21 +299,21 @@ finally {
 		}}
 public static RemoteObject  _logoutbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("logoutBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,111);
+		Debug.PushSubsStack("logoutBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,109);
 if (RapidSub.canDelegate("logoutbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","logoutbtn_click");
- BA.debugLineNum = 111;BA.debugLine="Sub logoutBtn_Click";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 112;BA.debugLine="Main.manager.ClearAll";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 109;BA.debugLine="Sub logoutBtn_Click";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 110;BA.debugLine="Main.manager.ClearAll";
+Debug.ShouldStop(8192);
 homejamaah.mostCurrent._main._manager.runVoidMethod ("ClearAll");
- BA.debugLineNum = 113;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 111;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(16384);
 homejamaah.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 114;BA.debugLine="StartActivity(Main)";
-Debug.ShouldStop(131072);
+ BA.debugLineNum = 112;BA.debugLine="StartActivity(Main)";
+Debug.ShouldStop(32768);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._main.getObject())));
- BA.debugLineNum = 115;BA.debugLine="End Sub";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 113;BA.debugLine="End Sub";
+Debug.ShouldStop(65536);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -327,15 +324,15 @@ finally {
 		}}
 public static RemoteObject  _mapbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("mapBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,125);
+		Debug.PushSubsStack("mapBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,123);
 if (RapidSub.canDelegate("mapbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","mapbtn_click");
- BA.debugLineNum = 125;BA.debugLine="Sub mapBtn_Click";
-Debug.ShouldStop(268435456);
- BA.debugLineNum = 126;BA.debugLine="StartActivity(MapsJamaah)";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 123;BA.debugLine="Sub mapBtn_Click";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 124;BA.debugLine="StartActivity(MapsJamaah)";
+Debug.ShouldStop(134217728);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._mapsjamaah.getObject())));
- BA.debugLineNum = 127;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 125;BA.debugLine="End Sub";
+Debug.ShouldStop(268435456);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -346,15 +343,15 @@ finally {
 		}}
 public static RemoteObject  _orphanbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("orphanBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,129);
+		Debug.PushSubsStack("orphanBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,127);
 if (RapidSub.canDelegate("orphanbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","orphanbtn_click");
- BA.debugLineNum = 129;BA.debugLine="Sub orphanBtn_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 130;BA.debugLine="StartActivity(OrphansJamaah)";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 127;BA.debugLine="Sub orphanBtn_Click";
+Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 128;BA.debugLine="StartActivity(OrphansJamaah)";
+Debug.ShouldStop(-2147483648);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._orphansjamaah.getObject())));
- BA.debugLineNum = 131;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 129;BA.debugLine="End Sub";
+Debug.ShouldStop(1);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -365,15 +362,15 @@ finally {
 		}}
 public static RemoteObject  _poorbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("poorBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,137);
+		Debug.PushSubsStack("poorBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,135);
 if (RapidSub.canDelegate("poorbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","poorbtn_click");
- BA.debugLineNum = 137;BA.debugLine="Sub poorBtn_Click";
-Debug.ShouldStop(256);
- BA.debugLineNum = 138;BA.debugLine="StartActivity(PoorJamaah)";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 135;BA.debugLine="Sub poorBtn_Click";
+Debug.ShouldStop(64);
+ BA.debugLineNum = 136;BA.debugLine="StartActivity(PoorJamaah)";
+Debug.ShouldStop(128);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._poorjamaah.getObject())));
- BA.debugLineNum = 139;BA.debugLine="End Sub";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 137;BA.debugLine="End Sub";
+Debug.ShouldStop(256);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -400,15 +397,15 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _qurbanbtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("qurbanBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,121);
+		Debug.PushSubsStack("qurbanBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,119);
 if (RapidSub.canDelegate("qurbanbtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","qurbanbtn_click");
- BA.debugLineNum = 121;BA.debugLine="Sub qurbanBtn_Click";
-Debug.ShouldStop(16777216);
- BA.debugLineNum = 122;BA.debugLine="StartActivity(QurbanJamaah)";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 119;BA.debugLine="Sub qurbanBtn_Click";
+Debug.ShouldStop(4194304);
+ BA.debugLineNum = 120;BA.debugLine="StartActivity(QurbanJamaah)";
+Debug.ShouldStop(8388608);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._qurbanjamaah.getObject())));
- BA.debugLineNum = 123;BA.debugLine="End Sub";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 121;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -419,15 +416,15 @@ finally {
 		}}
 public static RemoteObject  _tpabtn_click() throws Exception{
 try {
-		Debug.PushSubsStack("tpaBtn_Click (homejamaah) ","homejamaah",2,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,133);
+		Debug.PushSubsStack("tpaBtn_Click (homejamaah) ","homejamaah",3,homejamaah.mostCurrent.activityBA,homejamaah.mostCurrent,131);
 if (RapidSub.canDelegate("tpabtn_click")) return b4a.example.homejamaah.remoteMe.runUserSub(false, "homejamaah","tpabtn_click");
- BA.debugLineNum = 133;BA.debugLine="Sub tpaBtn_Click";
-Debug.ShouldStop(16);
- BA.debugLineNum = 134;BA.debugLine="StartActivity(InvoiceJamaah)";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 131;BA.debugLine="Sub tpaBtn_Click";
+Debug.ShouldStop(4);
+ BA.debugLineNum = 132;BA.debugLine="StartActivity(InvoiceJamaah)";
+Debug.ShouldStop(8);
 homejamaah.mostCurrent.__c.runVoidMethod ("StartActivity",homejamaah.processBA,(Object)((homejamaah.mostCurrent._invoicejamaah.getObject())));
- BA.debugLineNum = 135;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 133;BA.debugLine="End Sub";
+Debug.ShouldStop(16);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
